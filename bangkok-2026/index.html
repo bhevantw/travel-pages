@@ -1,0 +1,1828 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#f7f4ee">
+<title>2026 曼谷親子自由行｜8/22–8/29</title>
+<style>
+:root{
+  --bg:#fff8f1;
+  --card:#fffdf9;
+  --ink:#3f3a36;
+  --muted:#7d746d;
+  --line:#ecdcd1;
+  --accent:#4f9f91;
+  --accent-deep:#377e73;
+  --accent-soft:#eaf7f3;
+  --lotus:#d9859a;
+  --lotus-soft:#fbecef;
+  --gold:#d9a441;
+  --gold-soft:#fff3d7;
+  --peach:#eaa46b;
+  --peach-soft:#fff0e4;
+  --shadow:0 10px 30px rgba(104,78,58,.10);
+  --radius:22px;
+  --font-scale:1;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang TC","Noto Sans TC","Microsoft JhengHei",sans-serif;
+  font-size:calc(16px * var(--font-scale));
+  line-height:1.65;
+  color:var(--ink);
+  background:
+    radial-gradient(circle at 8% 0%, rgba(217,133,154,.10), transparent 24rem),
+    radial-gradient(circle at 92% 10%, rgba(79,159,145,.10), transparent 25rem),
+    linear-gradient(180deg,#fffdf9 0%,var(--bg) 100%);
+}
+a{color:var(--accent)}
+button,input,textarea{font:inherit}
+button{cursor:pointer}
+.shell{max-width:1040px;margin:auto;padding:18px 16px 90px}
+.hero{
+  background:
+    radial-gradient(circle at 88% 10%, rgba(217,133,154,.12), transparent 15rem),
+    radial-gradient(circle at 8% 0%, rgba(79,159,145,.10), transparent 17rem),
+    linear-gradient(135deg,#f4dcc0 0%,#efd0ad 48%,#f6e0c9 100%);
+  color:white;border-radius:28px;padding:28px;box-shadow:var(--shadow);overflow:hidden;position:relative;
+}
+.hero:after{content:"";position:absolute;width:260px;height:260px;border:1px solid rgba(217,133,154,.22);border-radius:50%;right:-90px;top:-90px}
+.hero .eyebrow{color:#9b5f50}
+.hero h1{font-size:clamp(1.7rem,4vw,2.8rem);margin:.2rem 0 .6rem;line-height:1.2;color:#3f3a36}
+.hero p{margin:.2rem 0;color:#6b5145}
+.hero-links{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+
+.hero-stay{
+  margin-top:16px;
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  padding:12px 14px;
+  background:rgba(255,248,238,.72);
+  border:1px solid rgba(191,143,111,.34);
+  border-radius:16px;
+  box-shadow:0 8px 24px rgba(112,84,72,.07);
+  position:relative;
+  z-index:1;
+}
+.hero-stay .stay-icon{
+  width:38px;height:38px;border-radius:12px;
+  display:grid;place-items:center;
+  background:#f8e7dd;
+  font-size:1.15rem;
+  flex:0 0 auto;
+}
+.hero-stay .stay-text{line-height:1.35}
+.hero-stay .stay-label{
+  display:block;
+  font-size:.72rem;
+  letter-spacing:.11em;
+  color:#9c6775;
+  font-weight:900;
+  margin-bottom:2px;
+}
+.hero-stay .stay-name{
+  display:block;
+  font-weight:900;
+  font-size:1.06rem;
+  color:#3f3a36;
+}
+.hero-stay .stay-name a{
+  color:#3f3a36;
+  text-decoration:none;
+  border-bottom:1px dashed #d4a7b2;
+}
+.hero-stay .stay-sub{
+  display:block;
+  color:#7d746d;
+  font-size:.85rem;
+  margin-top:2px;
+}
+.hero-flights{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
+  margin-top:14px;
+  position:relative;
+  z-index:1;
+}
+.flight-card{
+  background:rgba(255,248,238,.66);
+  border:1px solid rgba(191,143,111,.30);
+  border-radius:16px;
+  padding:12px 14px;
+}
+.flight-card .flight-label{
+  display:block;
+  font-size:.72rem;
+  color:#9c6775;
+  font-weight:900;
+  letter-spacing:.10em;
+  margin-bottom:3px;
+}
+.flight-card strong{
+  display:block;
+  font-size:1.05rem;
+  color:#3f3a36;
+}
+.flight-card span{
+  display:block;
+  color:#6b5145;
+  font-size:.89rem;
+  margin-top:2px;
+}
+
+.hero-links a{color:#704a3b;text-decoration:none;background:#fff6ec;border:1px solid #ddb996;padding:8px 12px;border-radius:999px;box-shadow:0 4px 12px rgba(112,84,72,.06)}
+.eyebrow{text-transform:uppercase;letter-spacing:.12em;font-size:.78rem;font-weight:800;color:var(--accent)}
+.toolbar{
+  position:sticky;top:8px;z-index:20;margin:16px 0;
+  display:flex;flex-wrap:wrap;gap:8px;padding:10px;
+  background:rgba(255,253,249,.90);backdrop-filter:blur(12px);
+  border:1px solid rgba(231,224,215,.8);border-radius:18px;box-shadow:0 8px 24px rgba(29,36,44,.08)
+}
+.tool-btn,.action-btn{
+  border:1px solid var(--line);background:#fff;color:var(--ink);
+  padding:9px 12px;border-radius:12px;font-weight:700;
+}
+.tool-btn:hover,.action-btn:hover{border-color:#d7b2bd;background:#fff5f7}
+.spacer{flex:1}
+.day-card,.info-card{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  box-shadow:var(--shadow);margin:14px 0;overflow:hidden;
+}
+.day-toggle{
+  width:100%;display:flex;align-items:center;gap:14px;text-align:left;
+  background:transparent;border:0;padding:18px;
+}
+.date-pill{
+  flex:0 0 72px;text-align:center;background:var(--lotus-soft);color:#b45e73;
+  border-radius:16px;padding:10px 8px;line-height:1.1
+}
+.date-pill span{display:block;font-weight:900;font-size:1.06rem}
+.date-pill small{display:block;margin-top:6px;font-weight:800}
+.day-title-wrap{flex:1;min-width:0}
+.day-title-wrap h2{font-size:1.13rem;margin:0 0 2px;line-height:1.35}
+.mini-route{font-size:.83rem;color:var(--muted)}
+.chevron{font-size:1.4rem;transition:.25s}
+.day-card.open .chevron{transform:rotate(180deg)}
+.day-panel{display:none;border-top:1px solid var(--line);padding:0 18px 18px}
+.day-card.open .day-panel{display:block}
+.day-actions{display:flex;flex-wrap:wrap;gap:8px;padding:14px 0 4px}
+.segment{margin-top:18px}
+.segment h3{font-size:1rem;margin:0 0 10px;color:#3f4a55}
+.timeline{position:relative;margin-left:5px}
+.timeline:before{content:"";position:absolute;left:64px;top:7px;bottom:7px;width:2px;background:#eadfd8}
+.timeline-item{display:grid;grid-template-columns:54px 1fr;gap:20px;position:relative;padding:8px 0 10px}
+.timeline-item:before{content:"";position:absolute;left:60px;top:17px;width:10px;height:10px;border-radius:50%;background:var(--lotus);box-shadow:0 0 0 4px #fdf0f3}
+.time{font-weight:900;color:#49535e;font-size:.86rem;padding-top:1px;text-align:right}
+.timeline-content{padding-left:6px}
+.item-title{font-weight:850;line-height:1.45}
+.item-desc{color:#4f5964;margin-top:3px}
+.transport{font-size:.91rem;color:#5e6873;margin-top:5px;padding:7px 9px;background:#fff8f2;border-radius:10px}
+.place-link{text-decoration:none;border-bottom:1px dashed #d3a3af;font-weight:800}
+.place-link:hover{border-bottom-style:solid}
+.badge{display:inline-block;font-size:.72rem;padding:2px 7px;border-radius:999px;background:var(--gold-soft);color:#9b7125;vertical-align:middle;margin-left:4px}
+.callout{margin-top:16px;padding:12px 14px;border-radius:14px;background:var(--accent-soft);border-left:4px solid var(--accent)}
+.callout.warning{background:var(--peach-soft);border-left-color:var(--peach)}
+.info-card{padding:18px}
+.info-head{display:flex;align-items:center;gap:12px;justify-content:space-between}
+.info-head h2{margin:.2rem 0;font-size:1.25rem}
+.info-body{margin-top:12px}
+.info-body.hidden{display:none}
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.grid-2>div{background:#fffaf5;border:1px solid var(--line);border-radius:16px;padding:14px}
+.grid-2 h3{margin:0 0 8px;font-size:1rem}
+.grid-2 ul,.grid-2 ol{padding-left:1.2rem;margin:.3rem 0}
+.footer{color:var(--muted);font-size:.86rem;text-align:center;margin:28px 0}
+.modal-backdrop{position:fixed;inset:0;background:rgba(13,22,27,.45);display:none;align-items:flex-end;justify-content:center;z-index:50;padding:16px}
+.modal-backdrop.show{display:flex}
+.modal{width:min(640px,100%);background:#fff;border-radius:22px;padding:18px;box-shadow:0 20px 60px rgba(0,0,0,.25)}
+.modal h3{margin:0 0 10px}
+.modal textarea,.modal input{width:100%;border:1px solid var(--line);border-radius:12px;padding:11px;background:#fff}
+.modal textarea{min-height:180px;resize:vertical}
+.modal-actions{display:flex;gap:8px;justify-content:flex-end;margin-top:12px;flex-wrap:wrap}
+.primary{background:var(--accent-deep);color:#fff;border-color:var(--accent-deep)}
+.toast{position:fixed;left:50%;bottom:28px;transform:translateX(-50%) translateY(20px);background:#172328;color:#fff;padding:10px 14px;border-radius:999px;opacity:0;pointer-events:none;transition:.2s;z-index:80;font-weight:700;white-space:nowrap}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+.quick-nav{display:flex;gap:8px;overflow:auto;padding:3px 0 10px;margin:8px 0 2px;scrollbar-width:none}
+.quick-nav::-webkit-scrollbar{display:none}
+.quick-nav a{flex:0 0 auto;text-decoration:none;color:#6e5f57;background:#fffaf5;border:1px solid #edd8cb;padding:7px 10px;border-radius:999px;font-weight:800;font-size:.85rem;box-shadow:0 3px 10px rgba(126,92,67,.05)}
+@media (max-width:700px){
+  .hero-flights{grid-template-columns:1fr}
+  .hero-stay{display:flex;width:100%}
+  .shell{padding:10px 10px 80px}
+  .hero{padding:22px 18px;border-radius:22px}
+  .toolbar{top:5px}
+  .spacer{display:none}
+  .day-toggle{padding:14px 12px;gap:10px}
+  .date-pill{flex-basis:62px;padding:9px 6px}
+  .day-panel{padding:0 12px 14px}
+  .timeline:before{left:52px}
+  .timeline-item{grid-template-columns:44px 1fr;gap:18px}
+  .timeline-item:before{left:48px}
+  .time{font-size:.77rem}
+  .grid-2{grid-template-columns:1fr}
+  .tool-btn,.action-btn{padding:8px 10px}
+}
+@media print{
+  .toolbar,.day-actions,.quick-nav,.modal-backdrop,.toast{display:none!important}
+  body{background:#fff}
+  .day-card{box-shadow:none;break-inside:avoid}
+  .day-panel{display:block!important}
+  .hero{box-shadow:none}
+}
+
+.thai-motif{
+  position:absolute;
+  right:18px;
+  bottom:14px;
+  font-size:1.15rem;
+  letter-spacing:.22em;
+  opacity:.48;color:#b97586;
+  user-select:none;
+}
+@media (max-width:700px){
+  .thai-motif{font-size:1rem;right:12px;bottom:10px}
+}
+
+
+.callout{
+  position:relative;
+  padding-left:42px;
+}
+.callout::before{
+  content:"💡";
+  position:absolute;
+  left:13px;
+  top:11px;
+  font-size:1rem;
+}
+.callout.warning::before{
+  content:"⚠️";
+}
+.transport{
+  position:relative;
+  padding-left:30px;
+}
+.transport::before{
+  content:"🚆";
+  position:absolute;
+  left:9px;
+  top:7px;
+  font-size:.86rem;
+}
+
+
+/* 航班資訊：合併成同一張卡 */
+.flight-summary-wrap{
+  grid-template-columns:1fr!important;
+}
+.flight-summary{
+  padding:11px 14px 12px;
+}
+.flight-summary-title{
+  color:#8b5d4c;
+  font-size:.78rem;
+  font-weight:900;
+  letter-spacing:.08em;
+  margin-bottom:7px;
+}
+.flight-row{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:18px;
+}
+.flight-left{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  min-width:0;
+}
+.flight-left .flight-label{
+  margin:0;
+  white-space:nowrap;
+}
+.flight-left strong{
+  display:inline-block;
+  white-space:nowrap;
+  font-size:1.05rem;
+}
+.flight-time{
+  color:#604b41;
+  font-weight:850;
+  font-size:.91rem;
+  white-space:nowrap;
+  text-align:right;
+}
+.flight-divider{
+  height:1px;
+  background:rgba(166,119,87,.22);
+  margin:8px 0;
+}
+
+/* 固定在畫面最下方的旅行工具列 */
+.bottom-dock{
+  position:fixed;
+  left:50%;
+  bottom:max(8px, env(safe-area-inset-bottom));
+  transform:translateX(-50%);
+  z-index:70;
+  width:min(720px, calc(100% - 18px));
+  display:grid;
+  grid-template-columns:1.15fr 1.15fr 1fr 1fr;
+  gap:6px;
+  padding:7px;
+  background:rgba(255,247,236,.97);
+  backdrop-filter:blur(14px);
+  border:1px solid #ddb995;
+  border-radius:18px;
+  box-shadow:0 12px 34px rgba(89,61,45,.20);
+}
+.dock-group,
+.dock-main{
+  min-width:0;
+  min-height:50px;
+  border:1px solid rgba(197,151,116,.28);
+  background:#fffaf4;
+  border-radius:12px;
+}
+.dock-group{
+  display:grid;
+  align-items:center;
+  grid-template-columns:repeat(3,1fr);
+  grid-template-rows:29px 13px;
+  gap:0 2px;
+  padding:4px 5px 3px;
+}
+.dock-view{
+  grid-template-columns:repeat(2,1fr);
+}
+.dock-mini{
+  border:0;
+  background:transparent;
+  color:#59483f;
+  border-radius:8px;
+  padding:2px 3px;
+  font-size:.82rem;
+  font-weight:900;
+  min-width:0;
+}
+.dock-mini:hover{
+  background:#f7e6d6;
+}
+.dock-label{
+  grid-column:1 / -1;
+  text-align:center;
+  color:#8a7468;
+  font-size:.60rem;
+  font-weight:800;
+  line-height:1;
+  white-space:nowrap;
+}
+.dock-main{
+  border:1px solid rgba(197,151,116,.28);
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:1px;
+  color:#614d43;
+  font-size:.68rem;
+  font-weight:850;
+  padding:4px 3px;
+}
+.dock-main:hover{
+  background:#f9eadc;
+}
+.dock-icon{
+  display:block;
+  font-size:1rem;
+  line-height:1.1;
+}
+.dock-note{
+  background:#f8e5df;
+  border-color:#e4bbb4;
+  color:#7e4e48;
+}
+.shell{
+  padding-bottom:112px!important;
+}
+
+@media (max-width:560px){
+  .flight-row{
+    align-items:flex-start;
+    flex-direction:column;
+    gap:2px;
+  }
+  .flight-left{
+    width:100%;
+  }
+  .flight-time{
+    padding-left:0;
+    text-align:left;
+    white-space:normal;
+    font-size:.87rem;
+  }
+  .bottom-dock{
+    width:calc(100% - 10px);
+    bottom:max(5px, env(safe-area-inset-bottom));
+    gap:4px;
+    padding:5px;
+    border-radius:15px;
+  }
+  .dock-group,
+  .dock-main{
+    min-height:48px;
+    border-radius:10px;
+  }
+  .dock-label{
+    font-size:.56rem;
+  }
+  .dock-main{
+    font-size:.62rem;
+  }
+  .shell{
+    padding-bottom:104px!important;
+  }
+}
+
+@media print{
+  .bottom-dock{display:none!important}
+}
+
+
+@media (max-width:700px){
+  .bottom-dock{
+    grid-template-columns:1.15fr 1.15fr 1fr 1fr;
+  }
+  .dock-main{
+    line-height:1.05;
+  }
+}
+
+
+.memo-card .info-body{
+  border-top:1px solid var(--line);
+  margin-top:14px;
+  padding-top:14px;
+}
+.memo-a{
+  background:linear-gradient(180deg,#fffdf9 0%,#f4faf5 100%);
+}
+.memo-help{
+  margin:.1rem 0 .75rem;
+  color:var(--muted);
+  font-size:.9rem;
+}
+.memo-save-row{
+  display:flex;
+  justify-content:flex-end;
+  margin-top:10px;
+}
+
+
+.packing-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px;
+}
+.packing-group{
+  background:rgba(255,255,255,.78);
+  border:1px solid var(--line);
+  border-radius:15px;
+  padding:13px;
+}
+.packing-group h3{
+  margin:0 0 8px;
+  font-size:1rem;
+  color:#665149;
+}
+.packing-group label{
+  display:flex;
+  align-items:flex-start;
+  gap:8px;
+  padding:5px 0;
+  color:#514943;
+  cursor:pointer;
+}
+.packing-group input[type="checkbox"]{
+  margin-top:5px;
+  width:17px;
+  height:17px;
+  accent-color:var(--accent);
+  flex:0 0 auto;
+}
+.packing-group label:has(input:checked){
+  color:#8b8179;
+  text-decoration:line-through;
+}
+@media (max-width:700px){
+  .packing-grid{
+    grid-template-columns:1fr;
+  }
+}
+
+</style>
+</head>
+<body>
+<div class="shell">
+  <header class="hero">
+    <span class="eyebrow">Bangkok Family Trip 2026</span>
+    <h1>曼谷親子自由行完整行程</h1>
+    <p><strong>2026/8/22–8/29｜8 天 7 夜</strong></p>
+
+    <div class="hero-stay">
+      <div class="stay-icon" aria-hidden="true">🏨</div>
+      <div class="stay-text">
+        <span class="stay-label">📍 住宿基地</span>
+        <span class="stay-name"><a href="https://www.google.com/maps/search/?api=1&query=Kokotel%20Bangkok%20Sukhumvit%2050" target="_blank" rel="noopener">Kokotel Bangkok Sukhumvit 50 ↗</a></span>
+        <span class="stay-sub">On Nut｜Sukhumvit 50</span>
+      </div>
+    </div>
+
+    <div class="hero-flights flight-summary-wrap" aria-label="航班資訊">
+      <div class="flight-card flight-summary">
+        <div class="flight-summary-title">🛫 航班資訊</div>
+        <div class="flight-row">
+          <div class="flight-left">
+            <span class="flight-label">去程｜8/22</span>
+            <strong>CI831</strong>
+          </div>
+          <div class="flight-time">09:25 TPE → 12:10 BKK</div>
+        </div>
+        <div class="flight-divider"></div>
+        <div class="flight-row">
+          <div class="flight-left">
+            <span class="flight-label">回程｜8/29</span>
+            <strong>CI832</strong>
+          </div>
+          <div class="flight-time">13:20 BKK → 18:00 TPE</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-links">
+      <a href="#refund">💰 退稅備忘</a>
+    </div>
+    <div class="thai-motif" aria-hidden="true">✦ 🪷 ✦</div>
+  </header>
+
+  <nav class="quick-nav" aria-label="每日快速跳轉">
+    <a href="#day-8-22">8/22</a><a href="#day-8-23">8/23</a><a href="#day-8-24">8/24</a><a href="#day-8-25">8/25</a><a href="#day-8-26">8/26</a><a href="#day-8-27">8/27</a><a href="#day-8-28">8/28</a><a href="#day-8-29">8/29</a>
+    <a href="#refund">退稅</a>
+  </nav>
+
+  <div class="bottom-dock" aria-label="旅行工具列">
+    <div class="dock-group dock-font" aria-label="字體大小">
+      <button class="dock-mini" id="fontDown" type="button" aria-label="縮小字體">A−</button>
+      <button class="dock-mini" id="fontReset" type="button" aria-label="重設字體">A</button>
+      <button class="dock-mini" id="fontUp" type="button" aria-label="放大字體">A＋</button>
+      <span class="dock-label">字體</span>
+    </div>
+    <div class="dock-group dock-view" aria-label="展開收合">
+      <button class="dock-mini" id="expandAll" type="button" aria-label="全部展開">▣</button>
+      <button class="dock-mini" id="collapseAll" type="button" aria-label="全部收合">▤</button>
+      <span class="dock-label">展開／收合</span>
+    </div>
+    <button class="dock-main" id="quickPhone" type="button">
+      <span class="dock-icon">☎️</span><span>電話</span>
+    </button>
+    <button class="dock-main dock-note" id="tripNoteBtn" type="button">
+      <span class="dock-icon">📝</span><span>旅行備忘</span>
+    </button>
+  </div>
+
+  <main>
+    
+    <article class="day-card open" id="day-8-22" data-day="8/22">
+      <button class="day-toggle" type="button" aria-expanded="true">
+        <div class="date-pill"><span>8/22</span><small>週六</small></div>
+        <div class="day-title-wrap">
+          <h2>到著日｜BKK・ChumChum・On Nut</h2>
+          <div class="mini-route">點一下展開／收合</div>
+        </div>
+        <span class="chevron" aria-hidden="true">⌄</span>
+      </button>
+      <div class="day-panel">
+        <div class="day-actions no-copy">
+          <button type="button" class="action-btn copy-day">📋 複製當天</button>
+          <button type="button" class="action-btn note-day">📝 看備忘錄</button>
+        </div>
+        <div class="day-copy-source">
+          
+    <div class="segment">
+      <h3>上午｜飛往曼谷</h3>
+      <div class="timeline">
+    <div class="timeline-item">
+      <div class="time">09:25</div>
+      <div class="timeline-content">
+        <div class="item-title"><a class="place-link" href="https://www.google.com/maps/search/?api=1&query=Taiwan%20Taoyuan%20International%20Airport%20Terminal%201" target="_blank" rel="noopener">桃園機場 T1 <span aria-hidden="true">↗</span></a> 出發｜CI831 </div>
+        <div class="item-desc">華航 CI831，前往曼谷。</div>
+        
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="time">12:10</div>
+      <div class="timeline-content">
+        <div class="item-title">抵達 <a class="place-link" href="https://www.google.com/maps/search/?api=1&query=Suvarnabhumi%20Airport%20Bangkok" target="_blank" rel="noopener">BKK 素萬那普機場 <span aria-hidden="true">↗</span></a> </div>
+        <div class="item-desc">下機 → 入境審查 → 領行李 → 海關；整段先抓約 70–90 分鐘。</div>
+        
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="time">約 13:20</div>
+      <div class="timeline-content">
+        <div class="item-title">B1 換泰銖 </div>
+        <div class="item-desc">出關後先到機場 B1 換錢，預留約 20–30 分鐘；1–2 位大人處理換匯，其餘人顧小孩與行李。</div>
+        
+      </div>
+    </div></div>
+    </div>
+    <div class="segment">
+      <h3>下午｜入住＋ChumChum</h3>
+      <div class="timeline">
+    <div class="timeline-item">
+      <div class="time">約 14:00</div>
+      <div class="timeline-content">
+        <div class="item-title"><a class="place-link" href="https://www.google.com/maps/search/?api=1&query=Suvarnabhumi%20Airport%20Bangkok" target="_blank" rel="noopener">BKK 素萬那普機場 <span aria-hidden="true">↗</span></a> → <a class="place-link" href="https://www.google.com/maps/search/?api=1&query=Kokotel%20Bangkok%20Sukhumvit%2050" target="_blank" rel="noopener">Kokotel Bangkok Sukhumvit 50 <span aria-hidden="true">↗</span></a> </div>
+        <div class="item-desc">本家 4 人＋朋友家 3 人共 7 人已預約接機；需先告知司機會到 B1 換錢。</div>
+        <div class="transport"><strong>交通：</strong>接機車直達飯店。</div>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="time">14:45–15:15</div>
+      <div class="timeline-content">
+        <div class="item-title">抵達 <a class="place-link" href="https://www.google.com/maps/search/?api=1&query=Kokotel%20Bangkok%20Sukhumvit%2050" target="_blank" rel="noopener">Kokotel Bangkok Sukhumvit 50 <span aria-hidden="true">↗</span></a> </div>
+        <div class="item-desc">Check-in、放行李。若確定要去 ChumChum，不安排長休息，整理 15–25 分鐘後出發。</div>
+        
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="time">15:20–15:40</div>
+      <div class="timeline-content">
+        <div class="item-title">前往 <a class="place-link" href="https://www.google.com/maps/search/?api=1&query=ChumChum%20Grocery%20Bangkok" target="_blank" rel="noopener">ChumChum Grocery <span aria-hidden="true">↗</span></a> </div>
+        <div class="item-desc">首選 MUVMI 電動嘟嘟車；7 人同行不要預設一台坐得下，依 App 分流。</div>
+        <div class="transport"><strong>交通：</strong>On Nut／Phra Khanong 服務區叫 MUVMI。</div>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="time">16:00–17:05</div>
+      <div class="timeline-content">
+        <div class="item-title"><a class="place-link" href="https://www.google.com/maps/search/?api=1&query=ChumChum%20Grocery%20Bangkok" target="_blank" rel="noopener">ChumChum Grocery <span aria-hidden="true">↗</span></a> <span class="badge">時間允許才去</span></div>
+        <div class="item-desc">逛店、拍照、喝飲料，約留 60–65 分鐘。以 17:30 關門作安全規劃，約 17:05 開始叫車返回。</div>
+        
+      </div>
+    </div></div>
+    </div>
+    <div class="segment">
+      <h3>傍晚／晚上｜On Nut 收尾</h3>
+      <div class="timeline">
+    <div class="timeline-item">
+      <div class="time">17:30–17:45</div>
+      <div class="timeline-content">
+        <div class="item-title"><a class="place-link" href="https://www.google.com/maps/search/?api=1&query=Lotus%27s%20Sukhumvit%2050%20Bangkok" target="_blank" rel="noopener">Lotus&#x27;s Sukhumvit 50 <span aria-hidden="true">↗</span></a> </div>
+        <div class="item-desc">補水、零食、水果、隔天早餐與日用品。可分流：媽媽＋姊姊做指甲；爸爸＋弟弟逛 Lotus／休息。</div>
+        
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="time">約 18:00</div>
+      <div class="timeline-content">
+        <div class="item-title">做指甲（選配） </div>
+        <div class="item-desc">若確定要做，建議事先約 18:00，避免現場久等。</div>
+        
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="time">19:15–20:00</div>
+      <div class="timeline-content">
+        <div class="item-title">On Nut 輕鬆晚餐 </div>
+        <div class="item-desc">第一晚不跨區追名店，就近用餐。</div>
+        
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="time">20:15 後</div>
+      <div class="timeline-content">
+        <div class="item-title">按摩 60 分鐘（選配） </div>
+        <div class="item-desc">足部／肩頸／放鬆型即可；第一晚不強求長療程。</div>
+        
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="time">21:00–21:30</div>
+      <div class="timeline-content">
+        <div class="item-title">回 <a class="place-link" href="https://www.google.com/maps/search/?api=1&query=Kokotel%20Bangkok%20Sukhumvit%2050" target="_blank" rel="noopener">Kokotel Bangkok Sukhumvit 50 <span aria-hidden="true">↗</span></a> </div>
+        <div class="item-desc">整理隔天洽圖洽用品並早點休息。</div>
+        
+      </div>
+    </div></div>
+    </div>
+<div class="callout warning"><strong>ChumChum 判斷線：</strong>
+15:15 前到飯店＝照計畫；15:15–15:30＝直接出發；15:30–15:45＝先看 MUVMI 候車；15:45 後＝取消，改留 8/28 上午補逛。</div>
+
+        </div>
+      </div>
+    </article>
+    
+    <article class="day-card" id="day-8-23" data-day="8/23">
+      <button class="day-toggle" type="button" aria-expanded="false">
+        <div class="date-pill"><span>8/23</span><small>週日</small></div>
+        <div class="day-title-wrap">
+          <h2>洽圖洽週末市集＋Terminal 21</h2>
+          <div class="mini-route">點一下展開／收合</div>
+        </div>
+        <span class="chevron" aria-hidden="true">⌄</span>
+      </button>
+      <div class="day-panel">
+        <div class="day-actions no-copy">
+          <button type="button" class="action-btn copy-day">📋 複製當天</button>
+          <button type="button" class="action-btn note-day">📝 看備忘錄</button>
+        </div>
+        <div class="day-copy-source">
+          
+    <div class="segment">
+      <h3>交通與上午｜洽圖洽 2 小時精華版</h3>
+      <div class="timeline">
+    <div class="timeline-item">
+      <div class="time">08:10</div>
+      <div class="timeline-content">
+        <div class="item-title"><a class="place-link" href="https://www.google.com/maps/search/?api=1&query=Kokotel%20Bangkok%20Sukhumvit%2050" target="_blank" rel="noopener">Kokotel Bangkok Sukhumvit 50 <span aria-hidden="true">↗</span></a> → <a class="place-link" href="https://www.google.com/maps/search/?api=1&query=BTS%20On%20Nut%20Bangkok" target="_blank" rel="noopener">BTS On Nut（E9） <span aria-hidden="true">↗</span></a> </div>
+        <div class="item-desc">飯店步行約 3–5 分鐘到 BTS On Nut。</div>
+        
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="time">08:15–09:00</div>
+      <div class="timeline-content">
+        <div class="item-title"><a class="place-link" href="https://www.google.com/maps/search/?api=1&query=BTS%20On%20Nut%20Bangkok" target="_blank" rel="noopener">BTS On Nut（E9） <span aria-hidden="true">↗</span></a> → <a class="place-link" href="https://www.google.com/maps/search/?api=1&query=BTS%20Asok%20Bangkok" target="_blank" rel="noopener">BTS Asok（E4） <span aria-hidden="true">↗</span></a> → <a class="place-link" href="https://www.google.com/maps/search/?api=1&query=MRT%20Sukhumvit%20Bangkok" target="_blank" rel="noopener">MRT Sukhumvit（BL22） <span aria-hidden="true">↗</span></a> → <a class="place-link" href="https://www.google.com/maps/search/?api=1&query=MRT%20Kamphaeng%20Phet%20Bangkok" target="_blank" rel="noopener">MRT Kamphaeng Phet（BL12） <span aria-hidden="true">↗</span></a> </div>
+        <div class="item-desc">On Nut 搭 BTS 往 Khu Khot 方向到 Asok，步行轉 MRT Sukhumvit，再往 Kamphaeng Phet；2 號出口進市場。</div>
+        
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="time">09:00–09:35</div>
+      <div class="timeline-content">
+        <div class="item-title"><a class="place-link" href="https://www.google.com/maps/search/?api=1&query=Chatuchak%20Weekend%20Market%20Bangkok" target="_blank" rel="noopener">Chatuchak Weekend Market <span aria-hidden="true">↗</span></a>｜Section 3 → 4 </div>
+        <div class="item-desc">小物、服飾、二手、家飾、小吃混合區，全家暖身，不逐巷掃完。</div>
+        
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="time">09:35–10:00</div>
+      <div class="timeline-content">
+        <div class="item-title"><a class="place-link" href="https://www.google.com/maps/search/?api=1&query=Chatuchak%20Weekend%20Market%20Bangkok" target="_blank" rel="noopener">Chatuchak Weekend Market <span aria-hidden="true">↗</span></a>｜Section 2 </div>
+        <div class="item-desc">媽媽＋姊姊多看服飾包包；爸爸＋弟弟找 T-shirt、紀念品、小吃。</div>
+        
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="time">10:00–10:15</div>
+      <div class="timeline-content">
+        <div class="item-title"><a class="place-link" href="https://www.google.com/maps/search/?api=1&query=Karmakamet%20Chatuchak%20Bangkok" target="_blank" rel="noopener">Karmakamet Chatuchak <span aria-hidden="true">↗</span></a> <span class="badge">選配</span></div>
+        <div class="item-desc">對香氛有興趣才進去，不列為必逛。</div>
+        
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="time">10:15–10:45</div>
+      <div class="timeline-content">
+        <div class="item-title"><a class="place-link" href="https://www.google.com/maps/search/?api=1&query=Chatuchak%20Weekend%20Market%20Bangkok" target="_blank" rel="noopener">Chatuchak Weekend Market <span aria-hidden="true">↗</span></a>｜Section 1～2 </div>
+        <div class="item-desc">自由逛＋最後採買；10:30 後看到喜歡的就買，不特地回頭比價。</div>
+        
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="time">10:45–11:00</div>
+      <div class="timeline-content">
+        <div class="item-title">往 <a class="place-link" href="https://www.google.com/maps/search/?api=1&query=Mixt%20Chatuchak%20Bangkok" target="_blank" rel="noopener">Mixt Chatuchak <span aria-hidden="true">↗</span></a> 撤退 </div>
+        <div class="item-desc">不再往市場深處延伸。</div>
+        
+      </div>
+    </div></div>
+    </div>
+    <div class="segment">
+      <h3>中午｜Mixt 午餐</h3>
+      <div class="timeline">
+    <div class="timeline-item">
+      <div class="time">11:00–12:00</div>
+      <div class="timeline-content">
+        <div class="item-title"><a class="place-link" href="https://www.google.com/maps/search/?api=1&query=Mixt%20Chatuchak%20Bangkok" target="_blank" rel="noopener">Mixt Chatuchak <span aria-hidden="true">↗</span></a> 3F Food Court </div>
+        <div class="item-desc">固定冷氣安全島、上廁所、午餐與會合點。</div>
+        
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="time">午餐</div>
+      <div class="timeline-content">
+        <div class="item-title">推薦點餐 </div>
+        <div class="item-desc">🥇 Phoenix 烤鴨飯　🥈 Sen Chan Pad Thai 蝦炒河粉　🥉 Rungroj 海南雞飯　👦 泰式鐵板蛋飯　＋青木瓜沙拉共享　＋水果 Smoothie 兩杯</div>
+        
+      </div>
+    </div></div>
+    </div>
+    <div class="segment">
+      <h3>下午／晚上｜Terminal 21</h3>
+      <div class="timeline">
+    <div class="timeline-item">
+      <div class="time">12:00–13:00</div>
+      <div class="timeline-content">
+        <div class="item-title"><a class="place-link" href="https://www.google.com/maps/search/?api=1&query=Mixt%20Chatuchak%20Bangkok" target="_blank" rel="noopener">Mixt Chatuchak <span aria-hidden="true">↗</span></a> → <a class="place-link" href="https://www.google.com/maps/search/?api=1&query=Terminal%2021%20Asok%20Bangkok" target="_blank" rel="noopener">Terminal 21 Asok <span aria-hidden="true">↗</span></a> </div>
+        <div class="item-desc">MRT Kamphaeng Phet → Sukhumvit；抵達 Asok 後直接進 Terminal 21，不用先回飯店。</div>
+        
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="time">13:00–15:30</div>
+      <div class="timeline-content">
+        <div class="item-title"><a class="place-link" href="https://www.google.com/maps/search/?api=1&query=Terminal%2021%20Asok%20Bangkok" target="_blank" rel="noopener">Terminal 21 Asok <span aria-hidden="true">↗</span></a> </div>
+        <div class="item-desc">逛特色樓層、小店、拍照與輕鬆購物，不把每層都走完當目標。</div>
+        
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="time">15:30–16:15</div>
+      <div class="timeline-content">
+        <div class="item-title">咖啡／甜點休息 </div>
+        <div class="item-desc">可選 <a class="place-link" href="https://www.google.com/maps/search/?api=1&query=After%20You%20Dessert%20Cafe%20Terminal%2021" target="_blank" rel="noopener">After You Dessert Cafe <span aria-hidden="true">↗</span></a> 或其他座位舒適的店。</div>
+        
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="time">17:00</div>
+      <div class="timeline-content">
+        <div class="item-title">晚餐 </div>
+        <div class="item-desc">首選 <a class="place-link" href="https://www.google.com/maps/search/?api=1&query=SEE%20FAH%20Terminal%2021%20Asok" target="_blank" rel="noopener">SEE FAH <span aria-hidden="true">↗</span></a>；次選 <a class="place-link" href="https://www.google.com/maps/search/?api=1&query=Have%20a%20Zeed%20Terminal%2021%20Asok" target="_blank" rel="noopener">Have a Zeed <span aria-hidden="true">↗</span></a>；第三 <a class="place-link" href="https://www.google.com/maps/search/?api=1&query=Baan%20Ying%20Cafe%20%26%20Meal%20Terminal%2021%20Asok" target="_blank" rel="noopener">Baan Ying Cafe &amp; Meal <span aria-hidden="true">↗</span></a>。另有 <a class="place-link" href="https://www.google.com/maps/search/?api=1&query=Pier%2021%20Food%20Terminal%20Bangkok" target="_blank" rel="noopener">Pier 21 Food Terminal <span aria-hidden="true">↗</span></a> 作快速便宜備案。正餐抓每人 ≤350 THB。</div>
+        
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="time">18:00</div>
+      <div class="timeline-content">
+        <div class="item-title"><a class="place-link" href="https://www.google.com/maps/search/?api=1&query=Terminal%2021%20Asok%20Bangkok" target="_blank" rel="noopener">Terminal 21 Asok <span aria-hidden="true">↗</span></a> → <a class="place-link" href="https://www.google.com/maps/search/?api=1&query=Kokotel%20Bangkok%20Sukhumvit%2050" target="_blank" rel="noopener">Kokotel Bangkok Sukhumvit 50 <span aria-hidden="true">↗</span></a> </div>
+        <div class="item-desc"><a class="place-link" href="https://www.google.com/maps/search/?api=1&query=BTS%20Asok%20Bangkok" target="_blank" rel="noopener">BTS Asok（E4） <span aria-hidden="true">↗</span></a> 搭 BTS 往 Kheha 方向回 <a class="place-link" href="https://www.google.com/maps/search/?api=1&query=BTS%20On%20Nut%20Bangkok" target="_blank" rel="noopener">BTS On Nut（E9） <span aria-hidden="true">↗</span></a>。</div>
+        
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="time">19:30</div>
+      <div class="timeline-content">
+        <div class="item-title"><a class="place-link" href="https://www.google.com/maps/search/?api=1&query=Nirvana%20Treats%20Bangkok%20Massage%20On%20Nut" target="_blank" rel="noopener">Nirvana Treats Bangkok Massage <span aria-hidden="true">↗</span></a> <span class="badge">選配</span></div>
+        <div class="item-desc">媽媽安排 90 分鐘按摩；其他家人留飯店／On Nut 休息。</div>
+        
+      </div>
+    </div></div>
+    </div><div class="callout"><strong>Plan B：</strong>爸爸＋弟弟若約 10:30 已逛累，可先進 Mixt 吹冷氣；媽媽＋姊姊最多再逛到 11:30 後會合。</div>
+        </div>
+      </div>
+    </article>
+    
+    <article class="day-card" id="day-8-24" data-day="8/24">
+      <button class="day-toggle" type="button" aria-expanded="false">
+        <div class="date-pill"><span>8/24</span><small>週一</small></div>
+        <div class="day-title-wrap">
+          <h2>大城一日遊｜動物園・船麵・古蹟</h2>
+          <div class="mini-route">點一下展開／收合</div>
+        </div>
+        <span class="chevron" aria-hidden="true">⌄</span>
+      </button>
+      <div class="day-panel">
+        <div class="day-actions no-copy">
+          <button type="button" class="action-btn copy-day">📋 複製當天</button>
+          <button type="button" class="action-btn note-day">📝 看備忘錄</button>
+        </div>
+        <div class="day-copy-source">
+          
+    <div class="segment">
+      <h3>包車｜大城一日遊</h3>
+      <div class="timeline">
+    <div class="timeline-item">
+      <div class="time">07:30</div>
+      <div class="timeline-content">
+        <div class="item-title"><a class="place-link" href="https://www.google.com/maps/search/?api=1&query=Kokotel%20Bangkok%20Sukhumvit%2050" target="_blank" rel="noopener">Kokotel Bangkok Sukhumvit 50 <span aria-hidden="true">↗</span></a> 出發 </div>
+        <div class="item-desc">包車 4,000 THB／天，10 小時；超時 200 THB／小時。7 人同行，本家 4/7 約 2,285.71 THB。</div>
+        
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="time">上午</div>
+      <div class="timeline-content">
+        <div class="item-title"><a class="place-link" href="https://www.google.com/maps/search/?api=1&query=Sriayuthaya%20Lion%20Park" target="_blank" rel="noopener">Sriayuthaya Lion Park <span aria-hidden="true">↗</span></a> </div>
+        <div class="item-desc">第一站先去動物園。Trip.com 已訂：NT$177／人，本家 4 人共 NT$708。</div>
+        
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="time">中午</div>
+      <div class="timeline-content">
+        <div class="item-title"><a class="place-link" href="https://www.google.com/maps/search/?api=1&query=Pa%20Lek%20Boat%20Noodle%20Ayutthaya" target="_blank" rel="noopener">Pa Lek Boat Noodle <span aria-hidden="true">↗</span></a> </div>
+        <div class="item-desc">午餐定案：船麵。吃完再進大城舊城區。</div>
+        
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="time">下午</div>
+      <div class="timeline-content">
+        <div class="item-title"><a class="place-link" href="https://www.google.com/maps/search/?api=1&query=Wat%20Mahathat%20Ayutthaya" target="_blank" rel="noopener">瑪哈泰寺 Wat Mahathat <span aria-hidden="true">↗</span></a> </div>
+        <div class="item-desc">代表性古蹟之一；炎熱時控制停留時間。</div>
+        
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="time">下午</div>
+      <div class="timeline-content">
+        <div class="item-title"><a class="place-link" href="https://www.google.com/maps/search/?api=1&query=Roti%20Sai%20Mai%20Abeedeen-Pranom%20Sangaroon%20Ayutthaya" target="_blank" rel="noopener">Roti Sai Mai Abeedeen-Pranom Sangaroon <span aria-hidden="true">↗</span></a> </div>
+        <div class="item-desc">補買糖絲捲餅。</div>
+        
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="time">下午</div>
+      <div class="timeline-content">
+        <div class="item-title"><a class="place-link" href="https://www.google.com/maps/search/?api=1&query=Wat%20Chaiwatthanaram%20Ayutthaya" target="_blank" rel="noopener">柴瓦塔那蘭寺 Wat Chaiwatthanaram <span aria-hidden="true">↗</span></a> </div>
+        <div class="item-desc">第二座代表古蹟，完成後開始回曼谷。</div>
+        
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="time">晚上</div>
+      <div class="timeline-content">
+        <div class="item-title"><a class="place-link" href="https://www.google.com/maps/search/?api=1&query=Save%20One%20Go%20Market%20Yaek%20Kor%20Por%20Aor%20Bangkok" target="_blank" rel="noopener">Save One Go Market <span aria-hidden="true">↗</span></a> <span class="badge">可刪</span></div>
+        <div class="item-desc">回曼谷後如果還有體力再逛；累了直接回飯店。</div>
+        
+      </div>
+    </div></div>
+    </div><div class="callout"><strong>這天核心：</strong>動物園＋船麵＋兩座代表寺廟。Save One Go 是可刪減項，不為了夜市硬撐。</div>
+        </div>
+      </div>
+    </article>
+    
+    <article class="day-card" id="day-8-25" data-day="8/25">
+      <button class="day-toggle" type="button" aria-expanded="false">
+        <div class="date-pill"><span>8/25</span><small>週二</small></div>
+        <div class="day-title-wrap">
+          <h2>丹嫩莎多水上市場＋美功鐵道</h2>
+          <div class="mini-route">點一下展開／收合</div>
+        </div>
+        <span class="chevron" aria-hidden="true">⌄</span>
+      </button>
+      <div class="day-panel">
+        <div class="day-actions no-copy">
+          <button type="button" class="action-btn copy-day">📋 複製當天</button>
+          <button type="button" class="action-btn note-day">📝 看備忘錄</button>
+        </div>
+        <div class="day-copy-source">
+          
+    <div class="segment">
+      <h3>包車｜丹嫩莎多＋美功</h3>
+      <div class="timeline">
+    <div class="timeline-item">
+      <div class="time">07:30</div>
+      <div class="timeline-content">
+        <div class="item-title"><a class="place-link" href="https://www.google.com/maps/search/?api=1&query=Kokotel%20Bangkok%20Sukhumvit%2050" target="_blank" rel="noopener">Kokotel Bangkok Sukhumvit 50 <span aria-hidden="true">↗</span></a> 出發 </div>
+        <div class="item-desc">包車 3,500 THB／天，10 小時；超時 200 THB／小時。本家 4/7 分攤 2,000 THB。</div>
+        
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="time">約 09:00</div>
+      <div class="timeline-content">
+        <div class="item-title"><a class="place-link" href="https://www.google.com/maps/search/?api=1&query=Damnoen%20Saduak%20Floating%20Market" target="_blank" rel="noopener">丹嫩莎多水上市場 <span aria-hidden="true">↗</span></a> </div>
+        <div class="item-desc">上午以搭船為主，小吃少量分食，不在這裡安排正式午餐。船已訂：本家 4 人 1 艘 NT$373。</div>
+        
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="time">約 10:15</div>
+      <div class="timeline-content">
+        <div class="item-title">前往 <a class="place-link" href="https://www.google.com/maps/search/?api=1&query=Maeklong%20Railway%20Market" target="_blank" rel="noopener">美功鐵道市集 <span aria-hidden="true">↗</span></a> </div>
+        <div class="item-desc">預留時間卡位看火車。</div>
+        
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="time">11:10 / 11:30</div>
+      <div class="timeline-content">
+        <div class="item-title"><a class="place-link" href="https://www.google.com/maps/search/?api=1&query=Maeklong%20Railway%20Market" target="_blank" rel="noopener">美功鐵道市集 <span aria-hidden="true">↗</span></a> </div>
+        <div class="item-desc">以火車進站／離站穿市場為核心。</div>
+        
+      </div>
+    </div></div>
+    </div>
+    <div class="segment">
+      <h3>中午｜美功午餐</h3>
+      <div class="timeline">
+    <div class="timeline-item">
+      <div class="time">12:00 左右</div>
+      <div class="timeline-content">
+        <div class="item-title">首選 <a class="place-link" href="https://www.google.com/maps/search/?api=1&query=Ruen%20Wari%20Restaurant%20Samut%20Songkhram" target="_blank" rel="noopener">Ruen Wari Restaurant <span aria-hidden="true">↗</span></a> </div>
+        <div class="item-desc">河畔海鮮、可吃美功鯖魚；四人一般約 1,000–1,500 THB，較豐盛約 1,500–2,000 THB。</div>
+        
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="time">備選</div>
+      <div class="timeline-content">
+        <div class="item-title"><a class="place-link" href="https://www.google.com/maps/search/?api=1&query=Daeng%20Seafood%20Samut%20Songkhram" target="_blank" rel="noopener">Daeng Seafood <span aria-hidden="true">↗</span></a> </div>
+        <div class="item-desc">海鮮選擇較多；四人一般約 1,300–1,800 THB，高價海鮮可能 2,000–3,000+ THB。</div>
+        
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="time">快速備選</div>
+      <div class="timeline-content">
+        <div class="item-title"><a class="place-link" href="https://www.google.com/maps/search/?api=1&query=%E5%BB%A3%E9%8A%98%E7%8F%8D%20%E5%BB%A3%E5%BC%8F%E9%A4%9B%E9%A3%A9%E9%BA%B5%20%E7%BE%8E%E5%8A%9F" target="_blank" rel="noopener">廣銘珍廣式餛飩麵店 <span aria-hidden="true">↗</span></a>／<a class="place-link" href="https://www.google.com/maps/search/?api=1&query=%E6%98%8E%E8%A8%98%E7%87%92%E8%82%89%E9%A3%AF%20%E7%BE%8E%E5%8A%9F" target="_blank" rel="noopener">明記燒肉飯 <span aria-hidden="true">↗</span></a> </div>
+        <div class="item-desc">想快速吃麵或飯時使用。</div>
+        
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="time">市場小吃</div>
+      <div class="timeline-content">
+        <div class="item-title"><a class="place-link" href="https://www.google.com/maps/search/?api=1&query=Mae%20Klong%20Fresh%20Market" target="_blank" rel="noopener">Mae Klong Fresh Market <span aria-hidden="true">↗</span></a> </div>
+        <div class="item-desc">Pla Thu Mae Klong、美功鯖魚、Hoy Tod、烤花枝／蝦、椰糖甜點、椰子／柚子／季節水果。</div>
+        
+      </div>
+    </div></div>
+    </div>
+    <div class="segment">
+      <h3>下午／晚上</h3>
+      <div class="timeline">
+    <div class="timeline-item">
+      <div class="time">下午</div>
+      <div class="timeline-content">
+        <div class="item-title"><a class="place-link" href="https://www.google.com/maps/search/?api=1&query=Damnoen%20Sky%20Bangkok" target="_blank" rel="noopener">Damnoen Sky <span aria-hidden="true">↗</span></a> </div>
+        <div class="item-desc">飛機咖啡廳，當拍照與休息點。</div>
+        
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="time">晚餐 A</div>
+      <div class="timeline-content">
+        <div class="item-title">回程順路外帶｜<a class="place-link" href="https://www.google.com/maps/search/?api=1&query=Chula%2050%20Kitchen%20Bangkok" target="_blank" rel="noopener">Chula 50 Kitchen <span aria-hidden="true">↗</span></a> <span class="badge">有餘裕</span></div>
+        <div class="item-desc">可加 <a class="place-link" href="https://www.google.com/maps/search/?api=1&query=Tang%20Sui%20Heng%20Bangkok" target="_blank" rel="noopener">Tang Sui Heng <span aria-hidden="true">↗</span></a>、<a class="place-link" href="https://www.google.com/maps/search/?api=1&query=Mae-Jim%20Mango%20Sticky%20Rice%20Bangkok" target="_blank" rel="noopener">Mae-Jim Mango Sticky Rice <span aria-hidden="true">↗</span></a>；若 Chula 50 等候超過 20–30 分鐘就不硬等。</div>
+        
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="time">晚餐 B</div>
+      <div class="timeline-content">
+        <div class="item-title">直接回 <a class="place-link" href="https://www.google.com/maps/search/?api=1&query=Kokotel%20Bangkok%20Sukhumvit%2050" target="_blank" rel="noopener">Kokotel Bangkok Sukhumvit 50 <span aria-hidden="true">↗</span></a> 叫外送 <span class="badge">疲累優先</span></div>
+        <div class="item-desc">塞車、包車時間偏晚或大家累時，直接回飯店最省力。</div>
+        
+      </div>
+    </div></div>
+    </div><div class="callout"><strong>這天特色高但耗體力：</strong>晚餐不是核心，依塞車與全家體力，在「順路外帶」與「直接回飯店叫外送」中切換。</div>
+        </div>
+      </div>
+    </article>
+    
+    <article class="day-card" id="day-8-26" data-day="8/26">
+      <button class="day-toggle" type="button" aria-expanded="false">
+        <div class="date-pill"><span>8/26</span><small>週三</small></div>
+        <div class="day-title-wrap">
+          <h2>Siam 親子室內日＋CentralWorld 備選</h2>
+          <div class="mini-route">點一下展開／收合</div>
+        </div>
+        <span class="chevron" aria-hidden="true">⌄</span>
+      </button>
+      <div class="day-panel">
+        <div class="day-actions no-copy">
+          <button type="button" class="action-btn copy-day">📋 複製當天</button>
+          <button type="button" class="action-btn note-day">📝 看備忘錄</button>
+        </div>
+        <div class="day-copy-source">
+          
+    <div class="segment">
+      <h3>上午｜Siam 室內日</h3>
+      <div class="timeline">
+    <div class="timeline-item">
+      <div class="time">約 09:00</div>
+      <div class="timeline-content">
+        <div class="item-title"><a class="place-link" href="https://www.google.com/maps/search/?api=1&query=Kokotel%20Bangkok%20Sukhumvit%2050" target="_blank" rel="noopener">Kokotel Bangkok Sukhumvit 50 <span aria-hidden="true">↗</span></a> → <a class="place-link" href="https://www.google.com/maps/search/?api=1&query=BTS%20Siam%20Bangkok" target="_blank" rel="noopener">BTS Siam（CEN） <span aria-hidden="true">↗</span></a> </div>
+        <div class="item-desc">從 <a class="place-link" href="https://www.google.com/maps/search/?api=1&query=BTS%20On%20Nut%20Bangkok" target="_blank" rel="noopener">BTS On Nut（E9） <span aria-hidden="true">↗</span></a> 搭 Sukhumvit Line 往 Khu Khot 方向直達 Siam，不需轉車。</div>
+        
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="time">上午</div>
+      <div class="timeline-content">
+        <div class="item-title"><a class="place-link" href="https://www.google.com/maps/search/?api=1&query=SEA%20LIFE%20Bangkok%20Ocean%20World" target="_blank" rel="noopener">SEA LIFE Bangkok Ocean World <span aria-hidden="true">↗</span></a> <span class="badge">未決定</span></div>
+        <div class="item-desc">是否購票仍未決定；若不去，就把出發時間往後移，Siam 日照常。</div>
+        
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="time">上午</div>
+      <div class="timeline-content">
+        <div class="item-title"><a class="place-link" href="https://www.google.com/maps/search/?api=1&query=Siam%20Paragon%20Bangkok" target="_blank" rel="noopener">Siam Paragon <span aria-hidden="true">↗</span></a>／<a class="place-link" href="https://www.google.com/maps/search/?api=1&query=Siam%20Center%20Bangkok" target="_blank" rel="noopener">Siam Center <span aria-hidden="true">↗</span></a>／<a class="place-link" href="https://www.google.com/maps/search/?api=1&query=Siam%20Square%20One%20Bangkok" target="_blank" rel="noopener">Siam Square One <span aria-hidden="true">↗</span></a> </div>
+        <div class="item-desc">Paragon：精品＋水族館；Siam Center：潮流與本土設計；Square One：年輕、平價、美食。</div>
+        
+      </div>
+    </div></div>
+    </div>
+    <div class="segment">
+      <h3>中午／下午｜彈性逛街</h3>
+      <div class="timeline">
+    <div class="timeline-item">
+      <div class="time">午餐</div>
+      <div class="timeline-content">
+        <div class="item-title"><a class="place-link" href="https://www.google.com/maps/search/?api=1&query=Inter%20Restaurant%20since%201981%20Bangkok" target="_blank" rel="noopener">Inter Restaurant since 1981 <span aria-hidden="true">↗</span></a> 或 <a class="place-link" href="https://www.google.com/maps/search/?api=1&query=Siam%20Paragon%20Bangkok" target="_blank" rel="noopener">Siam Paragon <span aria-hidden="true">↗</span></a> 周邊 </div>
+        <div class="item-desc">Inter 為平價泰式料理備選；吃完先補水、休息、上廁所。</div>
+        
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="time">下午</div>
+      <div class="timeline-content">
+        <div class="item-title"><a class="place-link" href="https://www.google.com/maps/search/?api=1&query=True5G%20PRO%20HUB%20Siam%20Discovery%20Bangkok" target="_blank" rel="noopener">True Alpha Hub <span aria-hidden="true">↗</span></a>／<a class="place-link" href="https://www.google.com/maps/search/?api=1&query=Siam%20Discovery%20Bangkok" target="_blank" rel="noopener">Siam Discovery <span aria-hidden="true">↗</span></a> </div>
+        <div class="item-desc">以步行／Skywalk 為主；設計選物、生活風格、小店。</div>
+        
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="time">替代選項</div>
+      <div class="timeline-content">
+        <div class="item-title"><a class="place-link" href="https://www.google.com/maps/search/?api=1&query=CentralWorld%20Bangkok" target="_blank" rel="noopener">CentralWorld <span aria-hidden="true">↗</span></a> <span class="badge">彈性備選</span></div>
+        <div class="item-desc">如果覺得 Siam 幾間商場內容開始重複、孩子逛膩，可從 <a class="place-link" href="https://www.google.com/maps/search/?api=1&query=BTS%20Siam%20Bangkok" target="_blank" rel="noopener">BTS Siam（CEN） <span aria-hidden="true">↗</span></a> 搭 1 站至 <a class="place-link" href="https://www.google.com/maps/search/?api=1&query=BTS%20Chit%20Lom%20Bangkok" target="_blank" rel="noopener">BTS Chit Lom（E1） <span aria-hidden="true">↗</span></a>，再走 Ratchaprasong Skywalk 前往。CentralWorld 不需要和 Discovery、MBK、BACC 全收。</div>
+        
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="time">另一延伸</div>
+      <div class="timeline-content">
+        <div class="item-title"><a class="place-link" href="https://www.google.com/maps/search/?api=1&query=Bangkok%20Art%20and%20Culture%20Centre" target="_blank" rel="noopener">BACC <span aria-hidden="true">↗</span></a>／<a class="place-link" href="https://www.google.com/maps/search/?api=1&query=MBK%20Center%20Bangkok" target="_blank" rel="noopener">MBK Center <span aria-hidden="true">↗</span></a> <span class="badge">擇一</span></div>
+        <div class="item-desc">若留在 Siam 區且還有體力才去；若已改去 CentralWorld，BACC 建議直接取消，不折返。</div>
+        
+      </div>
+    </div></div>
+    </div>
+    <div class="segment">
+      <h3>晚上｜班塔通</h3>
+      <div class="timeline">
+    <div class="timeline-item">
+      <div class="time">傍晚</div>
+      <div class="timeline-content">
+        <div class="item-title">前往 <a class="place-link" href="https://www.google.com/maps/search/?api=1&query=Banthat%20Thong%20Road%20Bangkok" target="_blank" rel="noopener">Banthat Thong <span aria-hidden="true">↗</span></a> </div>
+        <div class="item-desc">從 <a class="place-link" href="https://www.google.com/maps/search/?api=1&query=Bangkok%20Art%20and%20Culture%20Centre" target="_blank" rel="noopener">BACC <span aria-hidden="true">↗</span></a>／<a class="place-link" href="https://www.google.com/maps/search/?api=1&query=BTS%20National%20Stadium%20Bangkok" target="_blank" rel="noopener">BTS National Stadium（W1） <span aria-hidden="true">↗</span></a> 一帶可短程 Grab／Bolt；若從 CentralWorld 出發，也可直接 Grab 前往。</div>
+        
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="time">晚餐後</div>
+      <div class="timeline-content">
+        <div class="item-title"><a class="place-link" href="https://www.google.com/maps/search/?api=1&query=Mother%20Cows%20Bangkok" target="_blank" rel="noopener">Mother Cows <span aria-hidden="true">↗</span></a> </div>
+        <div class="item-desc">女兒指定甜點／收尾點；若排隊太久就改附近其他甜點。</div>
+        
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="time">回程</div>
+      <div class="timeline-content">
+        <div class="item-title"><a class="place-link" href="https://www.google.com/maps/search/?api=1&query=Banthat%20Thong%20Road%20Bangkok" target="_blank" rel="noopener">Banthat Thong <span aria-hidden="true">↗</span></a> → <a class="place-link" href="https://www.google.com/maps/search/?api=1&query=Kokotel%20Bangkok%20Sukhumvit%2050" target="_blank" rel="noopener">Kokotel Bangkok Sukhumvit 50 <span aria-hidden="true">↗</span></a> </div>
+        <div class="item-desc">短程 Grab 到 <a class="place-link" href="https://www.google.com/maps/search/?api=1&query=BTS%20National%20Stadium%20Bangkok" target="_blank" rel="noopener">BTS National Stadium（W1） <span aria-hidden="true">↗</span></a> → 1 站到 Siam → Sukhumvit Line 回 <a class="place-link" href="https://www.google.com/maps/search/?api=1&query=BTS%20On%20Nut%20Bangkok" target="_blank" rel="noopener">BTS On Nut（E9） <span aria-hidden="true">↗</span></a>；若下雨或孩子累，直接 Grab 回飯店。</div>
+        
+      </div>
+    </div></div>
+    </div><div class="callout"><strong>8/26 原則：</strong>Siam 為核心；下午延伸最多挑一個：CentralWorld、BACC 或 MBK。這天是連續兩個郊區日後的室內緩衝日。</div>
+        </div>
+      </div>
+    </article>
+    
+    <article class="day-card" id="day-8-27" data-day="8/27">
+      <button class="day-toggle" type="button" aria-expanded="false">
+        <div class="date-pill"><span>8/27</span><small>週四</small></div>
+        <div class="day-title-wrap">
+          <h2>鄭王廟泰服＋ICONSIAM＋夕陽遊船</h2>
+          <div class="mini-route">點一下展開／收合</div>
+        </div>
+        <span class="chevron" aria-hidden="true">⌄</span>
+      </button>
+      <div class="day-panel">
+        <div class="day-actions no-copy">
+          <button type="button" class="action-btn copy-day">📋 複製當天</button>
+          <button type="button" class="action-btn note-day">📝 看備忘錄</button>
+        </div>
+        <div class="day-copy-source">
+          
+    <div class="segment">
+      <h3>上午｜鄭王廟泰服</h3>
+      <div class="timeline">
+    <div class="timeline-item">
+      <div class="time">08:00</div>
+      <div class="timeline-content">
+        <div class="item-title"><a class="place-link" href="https://www.google.com/maps/search/?api=1&query=Kokotel%20Bangkok%20Sukhumvit%2050" target="_blank" rel="noopener">Kokotel Bangkok Sukhumvit 50 <span aria-hidden="true">↗</span></a> → <a class="place-link" href="https://www.google.com/maps/search/?api=1&query=Wat%20Arun%20Bangkok" target="_blank" rel="noopener">鄭王廟 Wat Arun <span aria-hidden="true">↗</span></a> </div>
+        <div class="item-desc"><a class="place-link" href="https://www.google.com/maps/search/?api=1&query=BTS%20On%20Nut%20Bangkok" target="_blank" rel="noopener">BTS On Nut（E9） <span aria-hidden="true">↗</span></a> → <a class="place-link" href="https://www.google.com/maps/search/?api=1&query=BTS%20Asok%20Bangkok" target="_blank" rel="noopener">BTS Asok（E4） <span aria-hidden="true">↗</span></a> → 轉 <a class="place-link" href="https://www.google.com/maps/search/?api=1&query=MRT%20Sukhumvit%20Bangkok" target="_blank" rel="noopener">MRT Sukhumvit（BL22） <span aria-hidden="true">↗</span></a> → <a class="place-link" href="https://www.google.com/maps/search/?api=1&query=MRT%20Sanam%20Chai%20Bangkok" target="_blank" rel="noopener">MRT Sanam Chai（BL31） <span aria-hidden="true">↗</span></a> → 步行至 <a class="place-link" href="https://www.google.com/maps/search/?api=1&query=Tha%20Tien%20Pier%20Bangkok" target="_blank" rel="noopener">Tha Tien <span aria-hidden="true">↗</span></a> → 渡船到 Wat Arun Pier。</div>
+        
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="time">約 09:00</div>
+      <div class="timeline-content">
+        <div class="item-title"><a class="place-link" href="https://www.google.com/maps/search/?api=1&query=Bangkok%20%26%20Blush%20Wat%20Arun" target="_blank" rel="noopener">Bangkok &amp; Blush <span aria-hidden="true">↗</span></a>／<a class="place-link" href="https://www.google.com/maps/search/?api=1&query=BaaN%20WANGDOEM%207%20Bangkok" target="_blank" rel="noopener">BaaN WANGDOEM 7 <span aria-hidden="true">↗</span></a> </div>
+        <div class="item-desc">泰服不預約，現場二選一；第一家等待明顯偏久就直接換第二家。</div>
+        
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="time">上午</div>
+      <div class="timeline-content">
+        <div class="item-title"><a class="place-link" href="https://www.google.com/maps/search/?api=1&query=Wat%20Arun%20Bangkok" target="_blank" rel="noopener">鄭王廟 Wat Arun <span aria-hidden="true">↗</span></a> </div>
+        <div class="item-desc">正式拍照集中上午；太熱或下雨就縮短，不影響下午 ICONSIAM 與遊船。</div>
+        
+      </div>
+    </div></div>
+    </div>
+    <div class="segment">
+      <h3>中午／下午｜Tha Tien → ICONSIAM</h3>
+      <div class="timeline">
+    <div class="timeline-item">
+      <div class="time">中午 A</div>
+      <div class="timeline-content">
+        <div class="item-title"><a class="place-link" href="https://www.google.com/maps/search/?api=1&query=Tha%20Tien%20Pier%20Bangkok" target="_blank" rel="noopener">Tha Tien <span aria-hidden="true">↗</span></a> 河景午餐 <span class="badge">方案 A</span></div>
+        <div class="item-desc">可現場從 <a class="place-link" href="https://www.google.com/maps/search/?api=1&query=Supanniga%20Eating%20Room%20Tha%20Tien" target="_blank" rel="noopener">Supanniga Eating Room Tha Tien <span aria-hidden="true">↗</span></a>、<a class="place-link" href="https://www.google.com/maps/search/?api=1&query=Eat%20Sight%20Story%20Deck%20Bangkok" target="_blank" rel="noopener">Eat Sight Story Deck <span aria-hidden="true">↗</span></a>、<a class="place-link" href="https://www.google.com/maps/search/?api=1&query=Home%20Cafe%20Tha%20Tien%20Bangkok" target="_blank" rel="noopener">Home Cafe Tha Tien <span aria-hidden="true">↗</span></a> 挑一間。</div>
+        
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="time">中午 B</div>
+      <div class="timeline-content">
+        <div class="item-title">直接前往 <a class="place-link" href="https://www.google.com/maps/search/?api=1&query=ICONSIAM%20Bangkok" target="_blank" rel="noopener">ICONSIAM <span aria-hidden="true">↗</span></a> 用餐 <span class="badge">方案 B</span></div>
+        <div class="item-desc">依拍照進度、天氣、排隊與體力決定。</div>
+        
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="time">下午</div>
+      <div class="timeline-content">
+        <div class="item-title"><a class="place-link" href="https://www.google.com/maps/search/?api=1&query=ICONSIAM%20Bangkok" target="_blank" rel="noopener">ICONSIAM <span aria-hidden="true">↗</span></a>／<a class="place-link" href="https://www.google.com/maps/search/?api=1&query=SOOKSIAM%20ICONSIAM" target="_blank" rel="noopener">SOOKSIAM <span aria-hidden="true">↗</span></a> </div>
+        <div class="item-desc">進館後以逛街、拍照、喝飲料與休息為主，不再跨區。</div>
+        
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="time">15:30–16:15</div>
+      <div class="timeline-content">
+        <div class="item-title"><a class="place-link" href="https://www.google.com/maps/search/?api=1&query=ICONSIAM%20Bangkok" target="_blank" rel="noopener">ICONSIAM <span aria-hidden="true">↗</span></a> Pier 1｜<a class="place-link" href="https://www.google.com/maps/search/?api=1&query=Meridian%20Cruise%20ICONSIAM%20Bangkok" target="_blank" rel="noopener">Meridian Cruise 2 <span aria-hidden="true">↗</span></a> 報到 </div>
+        <div class="item-desc">Klook 憑證指定報到時段；建議 15:30 左右就到。</div>
+        
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="time">16:30–18:30</div>
+      <div class="timeline-content">
+        <div class="item-title"><a class="place-link" href="https://www.google.com/maps/search/?api=1&query=Meridian%20Cruise%20ICONSIAM%20Bangkok" target="_blank" rel="noopener">Meridian Cruise 2 <span aria-hidden="true">↗</span></a> Sunset Cruise </div>
+        <div class="item-desc">已訂 4 人，最終實付 NT$1,988（平均 NT$497／人）。</div>
+        
+      </div>
+    </div></div>
+    </div>
+    <div class="segment">
+      <h3>晚上｜水舞／回飯店</h3>
+      <div class="timeline">
+    <div class="timeline-item">
+      <div class="time">18:30 後</div>
+      <div class="timeline-content">
+        <div class="item-title"><a class="place-link" href="https://www.google.com/maps/search/?api=1&query=ICONSIAM%20Bangkok" target="_blank" rel="noopener">ICONSIAM <span aria-hidden="true">↗</span></a> River Park 水舞 <span class="badge">選配</span></div>
+        <div class="item-desc">有精神才看；沒體力直接回飯店。</div>
+        
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="time">回程</div>
+      <div class="timeline-content">
+        <div class="item-title"><a class="place-link" href="https://www.google.com/maps/search/?api=1&query=ICONSIAM%20Bangkok" target="_blank" rel="noopener">ICONSIAM <span aria-hidden="true">↗</span></a> → <a class="place-link" href="https://www.google.com/maps/search/?api=1&query=Kokotel%20Bangkok%20Sukhumvit%2050" target="_blank" rel="noopener">Kokotel Bangkok Sukhumvit 50 <span aria-hidden="true">↗</span></a> </div>
+        <div class="item-desc"><a class="place-link" href="https://www.google.com/maps/search/?api=1&query=Gold%20Line%20Charoen%20Nakhon%20Bangkok" target="_blank" rel="noopener">Gold Line Charoen Nakhon（G2） <span aria-hidden="true">↗</span></a> → <a class="place-link" href="https://www.google.com/maps/search/?api=1&query=BTS%20Krung%20Thon%20Buri%20Bangkok" target="_blank" rel="noopener">BTS Krung Thon Buri（S7） <span aria-hidden="true">↗</span></a> → BTS Silom Line 到 Siam → 轉 Sukhumvit Line 到 <a class="place-link" href="https://www.google.com/maps/search/?api=1&query=BTS%20On%20Nut%20Bangkok" target="_blank" rel="noopener">BTS On Nut（E9） <span aria-hidden="true">↗</span></a>。雨大或孩子很累直接 Grab。</div>
+        
+      </div>
+    </div></div>
+    </div><div class="callout"><strong>固定核心：</strong>鄭王廟泰服 → 午餐（二選一）→ ICONSIAM → Meridian Cruise 2；15:30 前到 Pier 1 報到不變。</div>
+        </div>
+      </div>
+    </article>
+    
+    <article class="day-card" id="day-8-28" data-day="8/28">
+      <button class="day-toggle" type="button" aria-expanded="false">
+        <div class="date-pill"><span>8/28</span><small>週五</small></div>
+        <div class="day-title-wrap">
+          <h2>松瓦路＋Lotus＋Ekkamai｜雨備 CentralWorld</h2>
+          <div class="mini-route">點一下展開／收合</div>
+        </div>
+        <span class="chevron" aria-hidden="true">⌄</span>
+      </button>
+      <div class="day-panel">
+        <div class="day-actions no-copy">
+          <button type="button" class="action-btn copy-day">📋 複製當天</button>
+          <button type="button" class="action-btn note-day">📝 看備忘錄</button>
+        </div>
+        <div class="day-copy-source">
+          
+    <div class="segment">
+      <h3>主方案 B｜一般天氣</h3>
+      <div class="timeline">
+    <div class="timeline-item">
+      <div class="time">約 08:30</div>
+      <div class="timeline-content">
+        <div class="item-title"><a class="place-link" href="https://www.google.com/maps/search/?api=1&query=Kokotel%20Bangkok%20Sukhumvit%2050" target="_blank" rel="noopener">Kokotel Bangkok Sukhumvit 50 <span aria-hidden="true">↗</span></a> 出發 </div>
+        <div class="item-desc">步行到 <a class="place-link" href="https://www.google.com/maps/search/?api=1&query=BTS%20On%20Nut%20Bangkok" target="_blank" rel="noopener">BTS On Nut（E9） <span aria-hidden="true">↗</span></a> → BTS 到 <a class="place-link" href="https://www.google.com/maps/search/?api=1&query=BTS%20Asok%20Bangkok" target="_blank" rel="noopener">BTS Asok（E4） <span aria-hidden="true">↗</span></a> → 轉 <a class="place-link" href="https://www.google.com/maps/search/?api=1&query=MRT%20Sukhumvit%20Bangkok" target="_blank" rel="noopener">MRT Sukhumvit（BL22） <span aria-hidden="true">↗</span></a> → MRT Blue Line 往 Lak Song 方向到 <a class="place-link" href="https://www.google.com/maps/search/?api=1&query=Wat%20Mangkon%20MRT%20Bangkok" target="_blank" rel="noopener">MRT Wat Mangkon <span aria-hidden="true">↗</span></a>。</div>
+        
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="time">09:30–12:00</div>
+      <div class="timeline-content">
+        <div class="item-title"><a class="place-link" href="https://www.google.com/maps/search/?api=1&query=Song%20Wat%20Road%20Bangkok" target="_blank" rel="noopener">Song Wat Road 松瓦路 <span aria-hidden="true">↗</span></a> </div>
+        <div class="item-desc">街區散步、拍照、特色小店／咖啡與簡單午餐，避開午後最熱時段。</div>
+        
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="time">12:00–14:00</div>
+      <div class="timeline-content">
+        <div class="item-title"><a class="place-link" href="https://www.google.com/maps/search/?api=1&query=Song%20Wat%20Road%20Bangkok" target="_blank" rel="noopener">Song Wat Road 松瓦路 <span aria-hidden="true">↗</span></a> → On Nut </div>
+        <div class="item-desc">步行回 <a class="place-link" href="https://www.google.com/maps/search/?api=1&query=Wat%20Mangkon%20MRT%20Bangkok" target="_blank" rel="noopener">MRT Wat Mangkon <span aria-hidden="true">↗</span></a> → MRT 到 Sukhumvit → 轉 BTS Asok → <a class="place-link" href="https://www.google.com/maps/search/?api=1&query=BTS%20On%20Nut%20Bangkok" target="_blank" rel="noopener">BTS On Nut（E9） <span aria-hidden="true">↗</span></a>。若全家累，可直接 Grab／Bolt 回飯店或 Lotus。</div>
+        
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="time">14:00–15:30</div>
+      <div class="timeline-content">
+        <div class="item-title"><a class="place-link" href="https://www.google.com/maps/search/?api=1&query=Lotus%27s%20Sukhumvit%2050%20Bangkok" target="_blank" rel="noopener">Lotus&#x27;s Sukhumvit 50 <span aria-hidden="true">↗</span></a> </div>
+        <div class="item-desc">補最後一輪伴手禮、零食與日用品。</div>
+        
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="time">15:30–16:30</div>
+      <div class="timeline-content">
+        <div class="item-title">回 <a class="place-link" href="https://www.google.com/maps/search/?api=1&query=Kokotel%20Bangkok%20Sukhumvit%2050" target="_blank" rel="noopener">Kokotel Bangkok Sukhumvit 50 <span aria-hidden="true">↗</span></a> </div>
+        <div class="item-desc">放戰利品、吹冷氣、休息 45–60 分鐘。</div>
+        
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="time">16:30</div>
+      <div class="timeline-content">
+        <div class="item-title"><a class="place-link" href="https://www.google.com/maps/search/?api=1&query=Kokotel%20Bangkok%20Sukhumvit%2050" target="_blank" rel="noopener">Kokotel Bangkok Sukhumvit 50 <span aria-hidden="true">↗</span></a> → <a class="place-link" href="https://www.google.com/maps/search/?api=1&query=Ruay%20Mitr%20Ekkamai%20Bangkok" target="_blank" rel="noopener">Ruay Mitr Ekkamai <span aria-hidden="true">↗</span></a> </div>
+        <div class="item-desc"><a class="place-link" href="https://www.google.com/maps/search/?api=1&query=BTS%20On%20Nut%20Bangkok" target="_blank" rel="noopener">BTS On Nut（E9） <span aria-hidden="true">↗</span></a> 搭 BTS 2 站到 <a class="place-link" href="https://www.google.com/maps/search/?api=1&query=BTS%20Ekkamai%20Bangkok" target="_blank" rel="noopener">BTS Ekkamai（E7） <span aria-hidden="true">↗</span></a>，再步行／短程 Grab 前往 Sukhumvit 61。</div>
+        
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="time">約 17:00</div>
+      <div class="timeline-content">
+        <div class="item-title"><a class="place-link" href="https://www.google.com/maps/search/?api=1&query=Ruay%20Mitr%20Ekkamai%20Bangkok" target="_blank" rel="noopener">Ruay Mitr Ekkamai <span aria-hidden="true">↗</span></a> </div>
+        <div class="item-desc">固定晚餐。</div>
+        
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="time">晚餐後</div>
+      <div class="timeline-content">
+        <div class="item-title"><a class="place-link" href="https://www.google.com/maps/search/?api=1&query=Chocolate%20Ville%20Bangkok" target="_blank" rel="noopener">Chocolate Ville <span aria-hidden="true">↗</span></a> <span class="badge">選配</span></div>
+        <div class="item-desc">若還有體力才從 Ruay Mitr 直接 Grab／Bolt 前往；結束後叫車回飯店。</div>
+        
+      </div>
+    </div></div>
+    </div>
+    <div class="segment">
+      <h3>雨備方案 A</h3>
+      <div class="timeline">
+    <div class="timeline-item">
+      <div class="time">上午／中午</div>
+      <div class="timeline-content">
+        <div class="item-title"><a class="place-link" href="https://www.google.com/maps/search/?api=1&query=Lotus%27s%20Sukhumvit%2050%20Bangkok" target="_blank" rel="noopener">Lotus&#x27;s Sukhumvit 50 <span aria-hidden="true">↗</span></a> </div>
+        <div class="item-desc">先完成最後採買，回 <a class="place-link" href="https://www.google.com/maps/search/?api=1&query=Kokotel%20Bangkok%20Sukhumvit%2050" target="_blank" rel="noopener">Kokotel Bangkok Sukhumvit 50 <span aria-hidden="true">↗</span></a> 放東西。</div>
+        
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="time">下午</div>
+      <div class="timeline-content">
+        <div class="item-title"><a class="place-link" href="https://www.google.com/maps/search/?api=1&query=CentralWorld%20Bangkok" target="_blank" rel="noopener">CentralWorld <span aria-hidden="true">↗</span></a> <span class="badge">雨備</span></div>
+        <div class="item-desc"><a class="place-link" href="https://www.google.com/maps/search/?api=1&query=BTS%20On%20Nut%20Bangkok" target="_blank" rel="noopener">BTS On Nut（E9） <span aria-hidden="true">↗</span></a> → <a class="place-link" href="https://www.google.com/maps/search/?api=1&query=BTS%20Chit%20Lom%20Bangkok" target="_blank" rel="noopener">BTS Chit Lom（E1） <span aria-hidden="true">↗</span></a> → Ratchaprasong Skywalk／步行前往 CentralWorld，室內逛街、甜點、休息。</div>
+        
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="time">約 16:00</div>
+      <div class="timeline-content">
+        <div class="item-title"><a class="place-link" href="https://www.google.com/maps/search/?api=1&query=CentralWorld%20Bangkok" target="_blank" rel="noopener">CentralWorld <span aria-hidden="true">↗</span></a> → <a class="place-link" href="https://www.google.com/maps/search/?api=1&query=Ruay%20Mitr%20Ekkamai%20Bangkok" target="_blank" rel="noopener">Ruay Mitr Ekkamai <span aria-hidden="true">↗</span></a> </div>
+        <div class="item-desc">走 Skywalk 回 <a class="place-link" href="https://www.google.com/maps/search/?api=1&query=BTS%20Chit%20Lom%20Bangkok" target="_blank" rel="noopener">BTS Chit Lom（E1） <span aria-hidden="true">↗</span></a> → BTS 往 Kheha 方向到 <a class="place-link" href="https://www.google.com/maps/search/?api=1&query=BTS%20Ekkamai%20Bangkok" target="_blank" rel="noopener">BTS Ekkamai（E7） <span aria-hidden="true">↗</span></a> → 步行／短程 Grab。</div>
+        
+      </div>
+    </div></div>
+    </div>
+<div class="callout warning"><strong>ChumChum 例外：</strong>若 8/22 沒完成 <a class="place-link" href="https://www.google.com/maps/search/?api=1&query=ChumChum%20Grocery%20Bangkok" target="_blank" rel="noopener">ChumChum Grocery <span aria-hidden="true">↗</span></a>，8/28 上午優先補 ChumChum，松瓦路直接取消，不把兩個戶外／逛街點塞在一起。</div>
+
+        </div>
+      </div>
+    </article>
+    
+    <article class="day-card" id="day-8-29" data-day="8/29">
+      <button class="day-toggle" type="button" aria-expanded="false">
+        <div class="date-pill"><span>8/29</span><small>週六</small></div>
+        <div class="day-title-wrap">
+          <h2>歸家｜BKK → TPE</h2>
+          <div class="mini-route">點一下展開／收合</div>
+        </div>
+        <span class="chevron" aria-hidden="true">⌄</span>
+      </button>
+      <div class="day-panel">
+        <div class="day-actions no-copy">
+          <button type="button" class="action-btn copy-day">📋 複製當天</button>
+          <button type="button" class="action-btn note-day">📝 看備忘錄</button>
+        </div>
+        <div class="day-copy-source">
+          
+    <div class="segment">
+      <h3>回程日｜不排景點</h3>
+      <div class="timeline">
+    <div class="timeline-item">
+      <div class="time">07:00</div>
+      <div class="timeline-content">
+        <div class="item-title"><a class="place-link" href="https://www.google.com/maps/search/?api=1&query=Kokotel%20Bangkok%20Sukhumvit%2050" target="_blank" rel="noopener">Kokotel Bangkok Sukhumvit 50 <span aria-hidden="true">↗</span></a> 早餐 </div>
+        <div class="item-desc">07:40–08:10 完成最後打包，整理護照、退稅單、發票與高價商品。</div>
+        
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="time">08:15</div>
+      <div class="timeline-content">
+        <div class="item-title">退房＋叫車 </div>
+        <div class="item-desc">雨勢明顯、退稅商品多或行李多，可提早至 08:15 出發。</div>
+        
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="time">08:30</div>
+      <div class="timeline-content">
+        <div class="item-title"><a class="place-link" href="https://www.google.com/maps/search/?api=1&query=Kokotel%20Bangkok%20Sukhumvit%2050" target="_blank" rel="noopener">Kokotel Bangkok Sukhumvit 50 <span aria-hidden="true">↗</span></a> → <a class="place-link" href="https://www.google.com/maps/search/?api=1&query=Suvarnabhumi%20Airport%20Bangkok" target="_blank" rel="noopener">BKK 素萬那普機場 <span aria-hidden="true">↗</span></a> </div>
+        <div class="item-desc">首選事先預約機場接送 MPV／Grab XL，不建議拖行李搭 BTS 再轉 Airport Rail Link。</div>
+        
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="time">09:15–09:45</div>
+      <div class="timeline-content">
+        <div class="item-title">抵達 <a class="place-link" href="https://www.google.com/maps/search/?api=1&query=Suvarnabhumi%20Airport%20Bangkok" target="_blank" rel="noopener">BKK 素萬那普機場 <span aria-hidden="true">↗</span></a> </div>
+        <div class="item-desc">若需托運前 Customs Inspection，先查驗再辦理 CI832 報到／托運；之後安檢、出境、管制區內退稅。</div>
+        
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="time">13:20</div>
+      <div class="timeline-content">
+        <div class="item-title"><a class="place-link" href="https://www.google.com/maps/search/?api=1&query=Suvarnabhumi%20Airport%20Bangkok" target="_blank" rel="noopener">BKK 素萬那普機場 <span aria-hidden="true">↗</span></a> 起飛｜CI832 </div>
+        <div class="item-desc">華航 CI832。</div>
+        
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="time">18:00</div>
+      <div class="timeline-content">
+        <div class="item-title">抵達 <a class="place-link" href="https://www.google.com/maps/search/?api=1&query=Taiwan%20Taoyuan%20International%20Airport%20Terminal%201" target="_blank" rel="noopener">桃園機場 T1 <span aria-hidden="true">↗</span></a> </div>
+        <div class="item-desc">旅程結束。</div>
+        
+      </div>
+    </div></div>
+    </div><div class="callout"><strong>最後一天原則：</strong>所有時間都留給退房、交通、退稅與機場緩衝，不再安排景點。</div>
+        </div>
+      </div>
+    </article>
+    
+    
+<section class="info-card" id="refund">
+  <div class="info-head">
+    <div>
+      <span class="eyebrow">機場重要備忘</span>
+      <h2>泰國退稅 VAT Refund</h2>
+    </div>
+    <button class="action-btn no-copy" type="button" data-toggle-info="refund-body">展開／收合</button>
+  </div>
+  <div id="refund-body" class="info-body">
+    <div class="grid-2">
+      <div>
+        <h3>購物當下要完成</h3>
+        <ul>
+          <li>店家需有「VAT REFUND FOR TOURISTS」標牌。</li>
+          <li>同一間商店消費滿 <strong>2,000 THB</strong> 以上。</li>
+          <li>結帳時出示護照，索取 <strong>P.P.10</strong>，確認附上完整 Tax Invoice／發票。</li>
+          <li>商品需於購買後 <strong>60 天內</strong> 攜帶出境。</li>
+        </ul>
+      </div>
+      <div>
+        <h3>8/29 機場流程</h3>
+        <ol>
+          <li>若需要查驗：托運前先到 VAT Refund 海關櫃檯，帶護照、商品、P.P.10、發票。</li>
+          <li>完成需要的查驗／蓋章後，再 Check-in 與托運。</li>
+          <li>完成安檢與護照查驗。</li>
+          <li>管制區內到 VAT REFUND OFFICE，帶已蓋章 P.P.10、護照、登機證領退稅。</li>
+        </ol>
+      </div>
+    </div>
+    <div class="callout warning">
+      <strong>判斷線：</strong>文件目前以「每位旅客名下退稅商品總額 20,000 THB」作為托運前查驗判斷基準之一；高價商品如精品、珠寶、手機、筆電、手錶等建議隨身，因出境後仍可能被要求再次出示。
+    </div>
+    <p><strong>BKK：</strong>4 樓出境大廳東／西側及靠近 10 號入口可留意「VAT Refund For Tourist Office」標示；實際位置與開放狀況以出發當日現場為準。</p>
+  </div>
+</section>
+
+
+<section class="info-card memo-card memo-a" id="packing-memo">
+  <div class="info-head">
+    <div>
+      <span class="eyebrow">MEMO A</span>
+      <h2>🧳 行李清單</h2>
+    </div>
+    <button class="action-btn no-copy" type="button" data-toggle-info="packing-memo-body">展開／收合</button>
+  </div>
+  <div id="packing-memo-body" class="info-body hidden">
+    <p class="memo-help">依四大類整理，出發前可逐項確認。勾選狀態會保留在目前這台裝置／瀏覽器。</p>
+
+    <div class="packing-grid">
+      <section class="packing-group">
+        <h3>👕 1. 衣物</h3>
+        <label><input type="checkbox" data-pack="clothes-1"> 短袖上衣／T-shirt</label>
+        <label><input type="checkbox" data-pack="clothes-2"> 短褲／薄長褲</label>
+        <label><input type="checkbox" data-pack="clothes-3"> 內衣褲</label>
+        <label><input type="checkbox" data-pack="clothes-4"> 襪子</label>
+        <label><input type="checkbox" data-pack="clothes-5"> 睡衣</label>
+        <label><input type="checkbox" data-pack="clothes-6"> 薄外套／冷氣房罩衫</label>
+        <label><input type="checkbox" data-pack="clothes-7"> 雨具／輕便雨衣</label>
+        <label><input type="checkbox" data-pack="clothes-8"> 帽子</label>
+        <label><input type="checkbox" data-pack="clothes-9"> 好走的鞋／涼鞋</label>
+        <label><input type="checkbox" data-pack="clothes-10"> 泳衣（若確定會用到）</label>
+      </section>
+
+      <section class="packing-group">
+        <h3>💊 2. 藥品</h3>
+        <label><input type="checkbox" data-pack="med-1"> 個人固定用藥</label>
+        <label><input type="checkbox" data-pack="med-2"> 止痛／退燒藥</label>
+        <label><input type="checkbox" data-pack="med-3"> 腸胃藥／胃藥</label>
+        <label><input type="checkbox" data-pack="med-4"> 暈車／暈船藥</label>
+        <label><input type="checkbox" data-pack="med-5"> 過敏藥</label>
+        <label><input type="checkbox" data-pack="med-6"> OK 繃／簡易傷口用品</label>
+        <label><input type="checkbox" data-pack="med-7"> 防蚊液</label>
+        <label><input type="checkbox" data-pack="med-8"> 防曬乳</label>
+        <label><input type="checkbox" data-pack="med-9"> 酒精濕紙巾／乾洗手</label>
+        <label><input type="checkbox" data-pack="med-10"> 常用眼藥水／人工淚液</label>
+      </section>
+
+      <section class="packing-group">
+        <h3>🔌 3. 電子產品</h3>
+        <label><input type="checkbox" data-pack="elec-1"> 手機</label>
+        <label><input type="checkbox" data-pack="elec-2"> 手機充電線</label>
+        <label><input type="checkbox" data-pack="elec-3"> 充電頭／多孔充電器</label>
+        <label><input type="checkbox" data-pack="elec-4"> 行動電源</label>
+        <label><input type="checkbox" data-pack="elec-5"> 耳機</label>
+        <label><input type="checkbox" data-pack="elec-6"> Apple Watch／手錶充電器</label>
+        <label><input type="checkbox" data-pack="elec-7"> 相機／記憶卡（若攜帶）</label>
+        <label><input type="checkbox" data-pack="elec-8"> 相機電池／充電器</label>
+        <label><input type="checkbox" data-pack="elec-9"> 萬用轉接頭</label>
+        <label><input type="checkbox" data-pack="elec-10"> eSIM／網路設定確認</label>
+      </section>
+
+      <section class="packing-group">
+        <h3>🛂 4. 隨身重要物品</h3>
+        <label><input type="checkbox" data-pack="important-1"> 護照</label>
+        <label><input type="checkbox" data-pack="important-2"> 機票／電子登機資訊</label>
+        <label><input type="checkbox" data-pack="important-3"> 飯店訂房資訊</label>
+        <label><input type="checkbox" data-pack="important-4"> 旅平險／保險資料</label>
+        <label><input type="checkbox" data-pack="important-5"> 泰銖現金</label>
+        <label><input type="checkbox" data-pack="important-6"> 信用卡／提款卡</label>
+        <label><input type="checkbox" data-pack="important-7"> 接機／包車司機聯絡資訊</label>
+        <label><input type="checkbox" data-pack="important-8"> Klook／Trip.com 憑證</label>
+        <label><input type="checkbox" data-pack="important-9"> 退稅文件收納袋</label>
+        <label><input type="checkbox" data-pack="important-10"> 筆／小筆記本</label>
+        <label><input type="checkbox" data-pack="important-11"> 衛生紙／濕紙巾</label>
+        <label><input type="checkbox" data-pack="important-12"> 水壺／折疊購物袋</label>
+      </section>
+    </div>
+
+    <div class="memo-save-row">
+      <button class="action-btn primary" id="resetPackingChecklist" type="button">↺ 清除勾選</button>
+    </div>
+  </div>
+</section>
+
+
+
+
+  </main>
+
+  <footer class="footer">
+    內容依目前的「2026 曼谷旅行」最新行程整理。Google Maps 連結使用搜尋模式，方便手機直接開啟導航／查看地點。
+  </footer>
+</div>
+
+<div class="modal-backdrop" id="noteModal" role="dialog" aria-modal="true" aria-labelledby="noteTitle">
+  <div class="modal">
+    <h3 id="noteTitle">當天備忘錄</h3>
+    <textarea id="noteText" placeholder="例如：今天要買的東西、集合點、臨時更動、房號……"></textarea>
+    <div class="modal-actions">
+      <button class="action-btn" id="closeNote" type="button">關閉</button>
+      <button class="action-btn primary" id="saveNote" type="button">儲存備忘</button>
+    </div>
+  </div>
+</div>
+
+<div class="modal-backdrop" id="phoneModal" role="dialog" aria-modal="true" aria-labelledby="phoneTitle">
+  <div class="modal">
+    <h3 id="phoneTitle">常用電話</h3>
+    <p style="color:var(--muted);margin-top:0">可自行存飯店、司機、餐廳或其他電話；資料只存在這個瀏覽器。</p>
+    <label>名稱<input id="phoneName" placeholder="例如：接機司機"></label>
+    <div style="height:8px"></div>
+    <label>電話<input id="phoneNumber" inputmode="tel" placeholder="例如：0812345678"></label>
+    <div class="modal-actions">
+      <button class="action-btn" id="closePhone" type="button">關閉</button>
+      <button class="action-btn" id="savePhone" type="button">儲存</button>
+      <button class="action-btn primary" id="callPhone" type="button">立即撥號</button>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal-backdrop" id="tripNoteModal" role="dialog" aria-modal="true" aria-labelledby="tripNoteTitle">
+  <div class="modal">
+    <h3 id="tripNoteTitle">📝 旅行備忘錄</h3>
+    <p style="color:var(--muted);margin-top:0">記錄整趟旅行都會用到的資訊，例如房號、司機聯絡方式、購物清單、臨時調整等。</p>
+    <textarea id="tripNoteText" placeholder="輸入旅行備忘……"></textarea>
+    <div class="modal-actions">
+      <button class="action-btn" id="closeTripNote" type="button">關閉</button>
+      <button class="action-btn primary" id="saveTripNote" type="button">儲存備忘</button>
+    </div>
+  </div>
+</div>
+
+
+</div>
+
+<div class="toast" id="toast">已完成</div>
+
+<script>
+(() => {
+  const root = document.documentElement;
+  const toast = document.getElementById('toast');
+  const showToast = (msg) => {
+    toast.textContent = msg;
+    toast.classList.add('show');
+    setTimeout(() => toast.classList.remove('show'), 1600);
+  };
+
+  // 展開 / 收合
+  document.querySelectorAll('.day-card').forEach(card => {
+    const toggle = card.querySelector('.day-toggle');
+    toggle.addEventListener('click', () => {
+      const open = card.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+  });
+  document.getElementById('expandAll').addEventListener('click', () => {
+    document.querySelectorAll('.day-card').forEach(card => {
+      card.classList.add('open');
+      card.querySelector('.day-toggle').setAttribute('aria-expanded','true');
+    });
+  });
+  document.getElementById('collapseAll').addEventListener('click', () => {
+    document.querySelectorAll('.day-card').forEach(card => {
+      card.classList.remove('open');
+      card.querySelector('.day-toggle').setAttribute('aria-expanded','false');
+    });
+  });
+
+  // 字型縮放
+  let scale = parseFloat(localStorage.getItem('bangkokFontScale') || '1');
+  const applyScale = () => {
+    scale = Math.min(1.45, Math.max(.85, scale));
+    root.style.setProperty('--font-scale', scale);
+    localStorage.setItem('bangkokFontScale', scale);
+  };
+  applyScale();
+  document.getElementById('fontUp').addEventListener('click', () => { scale += .1; applyScale(); showToast('字型已放大'); });
+  document.getElementById('fontDown').addEventListener('click', () => { scale -= .1; applyScale(); showToast('字型已縮小'); });
+  document.getElementById('fontReset').addEventListener('click', () => { scale = 1; applyScale(); showToast('字型已重設'); });
+
+  // 複製當日行程
+  document.querySelectorAll('.copy-day').forEach(btn => {
+    btn.addEventListener('click', async (e) => {
+      const card = e.target.closest('.day-card');
+      const clone = card.cloneNode(true);
+      clone.querySelectorAll('.no-copy, button').forEach(el => el.remove());
+      const text = clone.innerText.replace(/\n{3,}/g,'\n\n').trim();
+      try {
+        await navigator.clipboard.writeText(text);
+        showToast(card.dataset.day + ' 行程已複製');
+      } catch(err) {
+        const ta = document.createElement('textarea');
+        ta.value = text; document.body.appendChild(ta); ta.select();
+        document.execCommand('copy'); ta.remove();
+        showToast(card.dataset.day + ' 行程已複製');
+      }
+    });
+  });
+
+  // 備忘錄
+  const noteModal = document.getElementById('noteModal');
+  const noteText = document.getElementById('noteText');
+  const noteTitle = document.getElementById('noteTitle');
+  let activeDay = '';
+  document.querySelectorAll('.note-day').forEach(btn => {
+    btn.addEventListener('click', e => {
+      const card = e.target.closest('.day-card');
+      activeDay = card.dataset.day;
+      noteTitle.textContent = activeDay + ' 備忘錄';
+      noteText.value = localStorage.getItem('bangkokNote:' + activeDay) || '';
+      noteModal.classList.add('show');
+      setTimeout(() => noteText.focus(), 50);
+    });
+  });
+  document.getElementById('saveNote').addEventListener('click', () => {
+    localStorage.setItem('bangkokNote:' + activeDay, noteText.value);
+    showToast('備忘已儲存');
+    noteModal.classList.remove('show');
+  });
+  document.getElementById('closeNote').addEventListener('click', () => noteModal.classList.remove('show'));
+
+  // 常用電話
+  const phoneModal = document.getElementById('phoneModal');
+  const phoneName = document.getElementById('phoneName');
+  const phoneNumber = document.getElementById('phoneNumber');
+  const loadPhone = () => {
+    phoneName.value = localStorage.getItem('bangkokPhoneName') || '';
+    phoneNumber.value = localStorage.getItem('bangkokPhoneNumber') || '';
+  };
+  document.getElementById('quickPhone').addEventListener('click', () => { loadPhone(); phoneModal.classList.add('show'); });
+  document.getElementById('savePhone').addEventListener('click', () => {
+    localStorage.setItem('bangkokPhoneName', phoneName.value.trim());
+    localStorage.setItem('bangkokPhoneNumber', phoneNumber.value.trim());
+    showToast('常用電話已儲存');
+  });
+  document.getElementById('callPhone').addEventListener('click', () => {
+    const n = phoneNumber.value.replace(/[^0-9+]/g,'');
+    if (!n) return showToast('請先輸入電話');
+    localStorage.setItem('bangkokPhoneName', phoneName.value.trim());
+    localStorage.setItem('bangkokPhoneNumber', phoneNumber.value.trim());
+    location.href = 'tel:' + n;
+  });
+  document.getElementById('closePhone').addEventListener('click', () => phoneModal.classList.remove('show'));
+
+  // 其他可收合資訊
+  document.querySelectorAll('[data-toggle-info]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.getElementById(btn.dataset.toggleInfo).classList.toggle('hidden');
+    });
+  });
+
+
+  // 全旅程共用備忘錄
+  const tripNoteModal = document.getElementById('tripNoteModal');
+  const tripNoteText = document.getElementById('tripNoteText');
+  document.getElementById('tripNoteBtn').addEventListener('click', () => {
+    tripNoteText.value = localStorage.getItem('bangkokTripNote') || '';
+    tripNoteModal.classList.add('show');
+    setTimeout(() => tripNoteText.focus(), 50);
+  });
+  document.getElementById('saveTripNote').addEventListener('click', () => {
+    localStorage.setItem('bangkokTripNote', tripNoteText.value);
+    showToast('旅行備忘已儲存');
+    tripNoteModal.classList.remove('show');
+  });
+  document.getElementById('closeTripNote').addEventListener('click', () => {
+    tripNoteModal.classList.remove('show');
+  });
+
+
+
+
+  // 行李清單：逐項勾選並自動保留
+  const packingChecks = document.querySelectorAll('[data-pack]');
+  const packingState = JSON.parse(localStorage.getItem('bangkokPackingChecklist') || '{}');
+
+  packingChecks.forEach(box => {
+    box.checked = !!packingState[box.dataset.pack];
+    box.addEventListener('change', () => {
+      const current = JSON.parse(localStorage.getItem('bangkokPackingChecklist') || '{}');
+      current[box.dataset.pack] = box.checked;
+      localStorage.setItem('bangkokPackingChecklist', JSON.stringify(current));
+    });
+  });
+
+  document.getElementById('resetPackingChecklist').addEventListener('click', () => {
+    packingChecks.forEach(box => box.checked = false);
+    localStorage.removeItem('bangkokPackingChecklist');
+    showToast('行李清單勾選已清除');
+  });
+
+  // 點背景關閉 modal
+  [noteModal, phoneModal, tripNoteModal].forEach(m => {
+    m.addEventListener('click', e => { if (e.target === m) m.classList.remove('show'); });
+  });
+})();
+</script>
+</body>
+</html>
