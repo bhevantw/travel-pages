@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700" role="img" aria-label="Mae Klong 美功鐵道市集">
+<defs>
+  <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
+    <stop offset="0%" stop-color="#6f3f24"/>
+    <stop offset="55%" stop-color="#b86c3b"/>
+    <stop offset="100%" stop-color="#e0a25c"/>
+  </linearGradient>
+</defs>
+
+  <style>
+    .title{font:700 54px "Noto Sans TC", "PingFang TC", sans-serif; fill:#fff}
+    .sub{font:400 24px "Noto Sans TC", "PingFang TC", sans-serif; fill:rgba(255,255,255,.92)}
+    .small{font:700 20px "Noto Sans TC", "PingFang TC", sans-serif; fill:rgba(255,255,255,.78); letter-spacing:2px}
+  </style>
+
+<rect x="0" y="0" width="1200" height="700" fill="url(#g)"/><rect x="0" y="530" width="1200" height="170" fill="#866144"/><path d="M430 700 L560 330 L640 330 L770 700" fill="#4c3726"/><path d="M560 330 L560 700 M640 330 L640 700" stroke="#d9d9d9" stroke-width="8"/><g transform="translate(390 260)"><rect x="0" y="0" width="420" height="180" rx="24" fill="#f07b2d"/><rect x="38" y="38" width="110" height="66" rx="10" fill="#9dd2f0"/><rect x="270" y="38" width="110" height="66" rx="10" fill="#9dd2f0"/><rect x="165" y="36" width="90" height="110" rx="12" fill="#35556d"/><circle cx="100" cy="185" r="22" fill="#2c2c2c"/><circle cx="320" cy="185" r="22" fill="#2c2c2c"/></g><g fill="#5e412d"><rect x="150" y="250" width="180" height="150"/><rect x="870" y="250" width="180" height="150"/></g>
+<text x="70" y="90" class="small">THAILAND HISTORY STORY</text>
+<text x="70" y="590" class="title">Mae Klong 美功鐵道市集</text>
+<text x="70" y="635" class="sub">火車穿過市場，市場照樣營業</text>
+</svg>

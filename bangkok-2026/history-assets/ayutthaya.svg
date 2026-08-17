@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700" role="img" aria-label="Ayutthaya 大城">
+<defs>
+  <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
+    <stop offset="0%" stop-color="#6f3f24"/>
+    <stop offset="55%" stop-color="#b86c3b"/>
+    <stop offset="100%" stop-color="#e0a25c"/>
+  </linearGradient>
+</defs>
+
+  <style>
+    .title{font:700 54px "Noto Sans TC", "PingFang TC", sans-serif; fill:#fff}
+    .sub{font:400 24px "Noto Sans TC", "PingFang TC", sans-serif; fill:rgba(255,255,255,.92)}
+    .small{font:700 20px "Noto Sans TC", "PingFang TC", sans-serif; fill:rgba(255,255,255,.78); letter-spacing:2px}
+  </style>
+
+<rect x="0" y="0" width="1200" height="700" fill="url(#g)"/><circle cx="970" cy="120" r="70" fill="rgba(255,220,160,.35)"/><rect x="0" y="540" width="1200" height="160" fill="#7d4a2a"/><rect x="80" y="420" width="90" height="120" fill="#4c2d1d"/><polygon points="75,420 125,360 175,420" fill="#4c2d1d"/><rect x="300" y="290" width="140" height="250" fill="#63371f"/><polygon points="300,290 370,190 440,290" fill="#63371f"/><rect x="580" y="230" width="140" height="310" fill="#764427"/><polygon points="580,230 650,120 720,230" fill="#764427"/><rect x="850" y="370" width="110" height="170" fill="#5a3420"/><polygon points="850,370 905,305 960,370" fill="#5a3420"/><path d="M0 560 C170 500, 250 620, 420 560 S690 495, 860 565 S1070 610, 1200 560 L1200 700 L0 700 Z" fill="#9b6a42" opacity="0.55"/>
+<text x="70" y="90" class="small">THAILAND HISTORY STORY</text>
+<text x="70" y="590" class="title">Ayutthaya 大城</text>
+<text x="70" y="635" class="sub">曾經是世界級首都的河城</text>
+</svg>

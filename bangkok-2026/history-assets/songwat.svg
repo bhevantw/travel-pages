@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700" role="img" aria-label="Song Wat 松瓦路">
+<defs>
+  <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
+    <stop offset="0%" stop-color="#6f3f24"/>
+    <stop offset="55%" stop-color="#b86c3b"/>
+    <stop offset="100%" stop-color="#e0a25c"/>
+  </linearGradient>
+</defs>
+
+  <style>
+    .title{font:700 54px "Noto Sans TC", "PingFang TC", sans-serif; fill:#fff}
+    .sub{font:400 24px "Noto Sans TC", "PingFang TC", sans-serif; fill:rgba(255,255,255,.92)}
+    .small{font:700 20px "Noto Sans TC", "PingFang TC", sans-serif; fill:rgba(255,255,255,.78); letter-spacing:2px}
+  </style>
+
+<rect x="0" y="0" width="1200" height="700" fill="url(#g)"/><rect x="0" y="540" width="1200" height="160" fill="#76604f"/><g><rect x="130" y="250" width="240" height="290" fill="#c19a73"/><rect x="170" y="300" width="60" height="110" fill="#6b4a30"/><rect x="270" y="300" width="60" height="110" fill="#6b4a30"/><rect x="430" y="220" width="180" height="320" fill="#b88b66"/><rect x="650" y="280" width="170" height="260" fill="#d5b08a"/><rect x="870" y="240" width="220" height="300" fill="#c69e78"/><g stroke="#6d4d34" stroke-width="10"><line x1="150" y1="460" x2="350" y2="460"/><line x1="450" y1="460" x2="590" y2="460"/><line x1="670" y1="460" x2="800" y2="460"/><line x1="900" y1="460" x2="1070" y2="460"/></g></g><path d="M0 200 H1200" stroke="rgba(255,255,255,.18)" stroke-width="3" stroke-dasharray="10 12"/>
+<text x="70" y="90" class="small">THAILAND HISTORY STORY</text>
+<text x="70" y="590" class="title">Song Wat 松瓦路</text>
+<text x="70" y="635" class="sub">老曼谷，現在還在繼續營業</text>
+</svg>

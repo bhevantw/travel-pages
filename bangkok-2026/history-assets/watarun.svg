@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700" role="img" aria-label="Wat Arun 鄭王廟">
+<defs>
+  <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
+    <stop offset="0%" stop-color="#6f3f24"/>
+    <stop offset="55%" stop-color="#b86c3b"/>
+    <stop offset="100%" stop-color="#e0a25c"/>
+  </linearGradient>
+</defs>
+
+  <style>
+    .title{font:700 54px "Noto Sans TC", "PingFang TC", sans-serif; fill:#fff}
+    .sub{font:400 24px "Noto Sans TC", "PingFang TC", sans-serif; fill:rgba(255,255,255,.92)}
+    .small{font:700 20px "Noto Sans TC", "PingFang TC", sans-serif; fill:rgba(255,255,255,.78); letter-spacing:2px}
+  </style>
+
+<rect x="0" y="0" width="1200" height="700" fill="url(#g)"/><rect x="0" y="500" width="1200" height="200" fill="#4d7f9a"/><path d="M0 520 C160 500, 240 550, 390 530 S640 490, 820 530 S1040 550, 1200 520 L1200 700 L0 700 Z" fill="#78acc3" opacity="0.7"/><g fill="#f3d8a5"><rect x="560" y="160" width="80" height="340"/><polygon points="560,160 600,40 640,160"/><rect x="390" y="290" width="70" height="210"/><polygon points="390,290 425,210 460,290"/><rect x="740" y="290" width="70" height="210"/><polygon points="740,290 775,210 810,290"/></g><g fill="#f7f1e6"><rect x="170" y="370" width="160" height="130"/><polygon points="160,370 250,310 340,370"/><rect x="870" y="370" width="160" height="130"/><polygon points="860,370 950,310 1040,370"/></g>
+<text x="70" y="90" class="small">THAILAND HISTORY STORY</text>
+<text x="70" y="590" class="title">Wat Arun 鄭王廟</text>
+<text x="70" y="635" class="sub">大城故事的下一集，在河對岸</text>
+</svg>

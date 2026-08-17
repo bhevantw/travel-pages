@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700" role="img" aria-label="Wat Mahathat 瑪哈泰寺">
+<defs>
+  <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
+    <stop offset="0%" stop-color="#6f3f24"/>
+    <stop offset="55%" stop-color="#b86c3b"/>
+    <stop offset="100%" stop-color="#e0a25c"/>
+  </linearGradient>
+</defs>
+
+  <style>
+    .title{font:700 54px "Noto Sans TC", "PingFang TC", sans-serif; fill:#fff}
+    .sub{font:400 24px "Noto Sans TC", "PingFang TC", sans-serif; fill:rgba(255,255,255,.92)}
+    .small{font:700 20px "Noto Sans TC", "PingFang TC", sans-serif; fill:rgba(255,255,255,.78); letter-spacing:2px}
+  </style>
+
+<rect x="0" y="0" width="1200" height="700" fill="url(#g)"/><rect x="0" y="530" width="1200" height="170" fill="#70543d"/><g fill="none" stroke="#8a6b4d" stroke-width="28" stroke-linecap="round"><path d="M80 610 C180 430, 290 380, 380 330"/><path d="M180 700 C220 540, 350 460, 500 300"/><path d="M350 700 C420 540, 500 480, 640 340"/><path d="M740 700 C730 560, 770 450, 850 320"/><path d="M960 690 C910 530, 900 430, 980 280"/><path d="M1080 660 C1020 520, 1010 400, 1100 290"/></g><circle cx="650" cy="370" r="110" fill="#caa57a"/><path d="M560 395 C595 450,705 450,740 395" stroke="#8a613d" stroke-width="8" fill="none"/><path d="M595 340 C610 320,635 315,650 320 C665 315,690 320,705 340" stroke="#8a613d" stroke-width="6" fill="none"/><circle cx="620" cy="360" r="8" fill="#6d4a2e"/><circle cx="680" cy="360" r="8" fill="#6d4a2e"/>
+<text x="70" y="90" class="small">THAILAND HISTORY STORY</text>
+<text x="70" y="590" class="title">Wat Mahathat 瑪哈泰寺</text>
+<text x="70" y="635" class="sub">那顆被樹根抱住的佛頭</text>
+</svg>

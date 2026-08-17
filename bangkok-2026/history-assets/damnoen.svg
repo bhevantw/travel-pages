@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700" role="img" aria-label="Damnoen Saduak 丹嫩莎多">
+<defs>
+  <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
+    <stop offset="0%" stop-color="#6f3f24"/>
+    <stop offset="55%" stop-color="#b86c3b"/>
+    <stop offset="100%" stop-color="#e0a25c"/>
+  </linearGradient>
+</defs>
+
+  <style>
+    .title{font:700 54px "Noto Sans TC", "PingFang TC", sans-serif; fill:#fff}
+    .sub{font:400 24px "Noto Sans TC", "PingFang TC", sans-serif; fill:rgba(255,255,255,.92)}
+    .small{font:700 20px "Noto Sans TC", "PingFang TC", sans-serif; fill:rgba(255,255,255,.78); letter-spacing:2px}
+  </style>
+
+<rect x="0" y="0" width="1200" height="700" fill="url(#g)"/><rect x="0" y="0" width="1200" height="220" fill="rgba(255,255,255,.05)"/><rect x="0" y="410" width="1200" height="290" fill="#5c8aa2"/><path d="M0 380 C130 340, 260 360, 420 392 S680 448, 840 396 S1060 332, 1200 385 L1200 700 L0 700 Z" fill="#74a6be"/><g><polygon points="180,470 330,470 300,535 150,535" fill="#714626"/><rect x="206" y="440" width="42" height="26" fill="#cf9657"/><rect x="254" y="438" width="34" height="28" fill="#c7d95b"/><polygon points="490,500 650,500 620,565 460,565" fill="#7d512c"/><rect x="526" y="468" width="40" height="28" fill="#d86e52"/><rect x="574" y="468" width="30" height="28" fill="#edd26d"/><polygon points="820,455 970,455 940,520 790,520" fill="#6b4325"/><rect x="850" y="425" width="40" height="26" fill="#92c374"/><rect x="900" y="425" width="30" height="26" fill="#e88673"/></g>
+<text x="70" y="90" class="small">THAILAND HISTORY STORY</text>
+<text x="70" y="590" class="title">Damnoen Saduak 丹嫩莎多</text>
+<text x="70" y="635" class="sub">以前的水路，就是高速公路</text>
+</svg>
