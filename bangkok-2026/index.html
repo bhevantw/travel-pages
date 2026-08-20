@@ -182,8 +182,71 @@ button{cursor:pointer}
 .item-title{font-weight:850;line-height:1.45}
 .item-desc{color:#4f5964;margin-top:3px}
 .transport{font-size:.91rem;color:#5e6873;margin-top:5px;padding:7px 9px;background:#fff8f2;border-radius:10px}
-.place-link{text-decoration:none;border-bottom:1px dashed #d3a3af;font-weight:800}
-.place-link:hover{border-bottom-style:solid}
+.place-link{
+  display:inline-flex;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:.22rem .42rem;
+  max-width:100%;
+  padding:2px 6px;
+  margin:-2px 0;
+  color:#326f66;
+  text-decoration:none;
+  border:1px solid transparent;
+  border-radius:9px;
+  vertical-align:baseline;
+  transition:background .18s ease,border-color .18s ease;
+}
+.place-link:hover,
+.place-link:focus-visible{
+  background:var(--accent-soft);
+  border-color:#cce7df;
+  outline:none;
+}
+.place-primary{
+  font-weight:900;
+  line-height:1.4;
+}
+.place-original{
+  display:inline-block;
+  padding:.08rem .46rem;
+  color:#7c6d65;
+  background:#fffaf5;
+  border:1px solid #eadbd1;
+  border-radius:999px;
+  font-size:.72em;
+  font-weight:750;
+  line-height:1.45;
+  letter-spacing:.01em;
+}
+.place-arrow{
+  color:#9b6b78;
+  font-size:.78em;
+  font-weight:900;
+}
+.place-legend{
+  display:flex;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:7px 9px;
+  margin:2px 0 13px;
+  padding:9px 11px;
+  color:#6e625b;
+  background:rgba(255,253,249,.78);
+  border:1px solid var(--line);
+  border-radius:13px;
+  font-size:.82rem;
+}
+.legend-primary{color:#326f66;font-weight:900}
+.legend-original{
+  padding:1px 7px;
+  background:#fffaf5;
+  border:1px solid #eadbd1;
+  border-radius:999px;
+  color:#7c6d65;
+  font-size:.88em;
+  font-weight:750;
+}
 .badge{display:inline-block;font-size:.72rem;padding:2px 7px;border-radius:999px;background:var(--gold-soft);color:#9b7125;vertical-align:middle;margin-left:4px}
 .callout{margin-top:16px;padding:12px 14px;border-radius:14px;background:var(--accent-soft);border-left:4px solid var(--accent)}
 .callout.warning{background:var(--peach-soft);border-left-color:var(--peach)}
@@ -241,6 +304,8 @@ button{cursor:pointer}
   .time{font-size:.77rem}
   .grid-2{grid-template-columns:1fr}
   .tool-btn,.action-btn{padding:8px 10px}
+  .place-link{gap:.18rem .32rem;padding:2px 4px}
+  .place-original{font-size:.68em}
 }
 @media print{
   .toolbar,.day-actions,.quick-nav,.modal-backdrop,.toast{display:none!important}
@@ -606,6 +671,13 @@ button{cursor:pointer}
     <a href="#refund">退稅</a>
   </nav>
 
+  <div class="place-legend" aria-label="地點名稱顯示說明">
+    <span class="legend-primary">中文名稱</span>
+    <span aria-hidden="true">＋</span>
+    <span class="legend-original">Original name</span>
+    <span>點擊整組名稱即可開啟 Google Maps</span>
+  </div>
+
   <div class="bottom-dock" aria-label="旅行工具列">
     <div class="dock-group dock-font" aria-label="字體大小">
       <button class="dock-mini" id="fontDown" type="button" aria-label="縮小字體">A−</button>
@@ -658,7 +730,7 @@ button{cursor:pointer}
     <div class="timeline-item">
       <div class="time">12:10</div>
       <div class="timeline-content">
-        <div class="item-title">抵達 <a class="place-link" href="https://www.google.com/maps/search/?api=1&query=Suvarnabhumi%20Airport%20Bangkok" target="_blank" rel="noopener">BKK 素萬那普機場 <span aria-hidden="true">↗</span></a> </div>
+        <div class="item-title"><a class="place-link" href="https://www.google.com/maps/search/?api=1&query=Suvarnabhumi%20Airport%20Bangkok" target="_blank" rel="noopener">BKK 素萬那普機場 <span aria-hidden="true">↗</span></a>｜航班抵達</div>
         <div class="item-desc">下機 → 入境審查 → 領行李 → 海關；整段先抓約 70–90 分鐘。</div>
         
       </div>
@@ -686,7 +758,7 @@ button{cursor:pointer}
     <div class="timeline-item">
       <div class="time">14:45–15:15</div>
       <div class="timeline-content">
-        <div class="item-title">抵達 <a class="place-link" href="https://www.google.com/maps/search/?api=1&query=Kokotel%20Bangkok%20Sukhumvit%2050" target="_blank" rel="noopener">Kokotel Bangkok Sukhumvit 50 <span aria-hidden="true">↗</span></a> </div>
+        <div class="item-title"><a class="place-link" href="https://www.google.com/maps/search/?api=1&query=Kokotel%20Bangkok%20Sukhumvit%2050" target="_blank" rel="noopener">Kokotel Bangkok Sukhumvit 50 <span aria-hidden="true">↗</span></a>｜入住</div>
         <div class="item-desc">Check-in、放行李。若確定要去 ChumChum，不安排長休息，整理 15–25 分鐘後出發。</div>
         
       </div>
@@ -694,7 +766,7 @@ button{cursor:pointer}
     <div class="timeline-item">
       <div class="time">15:20–15:40</div>
       <div class="timeline-content">
-        <div class="item-title">前往 <a class="place-link" href="https://www.google.com/maps/search/?api=1&query=ChumChum%20Grocery%20Bangkok" target="_blank" rel="noopener">ChumChum Grocery <span aria-hidden="true">↗</span></a> </div>
+        <div class="item-title"><a class="place-link" href="https://www.google.com/maps/search/?api=1&query=ChumChum%20Grocery%20Bangkok" target="_blank" rel="noopener">ChumChum Grocery <span aria-hidden="true">↗</span></a></div>
         <div class="item-desc">首選 MUVMI 電動嘟嘟車；7 人同行不要預設一台坐得下，依 App 分流。</div>
         <div class="transport"><strong>交通：</strong>On Nut／Phra Khanong 服務區叫 MUVMI。</div>
       </div>
@@ -746,7 +818,7 @@ button{cursor:pointer}
     <div class="timeline-item">
       <div class="time">21:00–21:30</div>
       <div class="timeline-content">
-        <div class="item-title">回 <a class="place-link" href="https://www.google.com/maps/search/?api=1&query=Kokotel%20Bangkok%20Sukhumvit%2050" target="_blank" rel="noopener">Kokotel Bangkok Sukhumvit 50 <span aria-hidden="true">↗</span></a> </div>
+        <div class="item-title">On Nut → <a class="place-link" href="https://www.google.com/maps/search/?api=1&query=Kokotel%20Bangkok%20Sukhumvit%2050" target="_blank" rel="noopener">Kokotel Bangkok Sukhumvit 50 <span aria-hidden="true">↗</span></a></div>
         <div class="item-desc">整理隔天洽圖洽用品並早點休息。</div>
         
       </div>
@@ -829,7 +901,7 @@ button{cursor:pointer}
     <div class="timeline-item">
       <div class="time">10:45–11:00</div>
       <div class="timeline-content">
-        <div class="item-title">往 <a class="place-link" href="https://www.google.com/maps/search/?api=1&query=Mixt%20Chatuchak%20Bangkok" target="_blank" rel="noopener">Mixt Chatuchak <span aria-hidden="true">↗</span></a> 撤退 </div>
+        <div class="item-title"><a class="place-link" href="https://www.google.com/maps/search/?api=1&query=Mixt%20Chatuchak%20Bangkok" target="_blank" rel="noopener">Mixt Chatuchak <span aria-hidden="true">↗</span></a>｜休息備案</div>
         <div class="item-desc">不再往市場深處延伸。</div>
         
       </div>
@@ -1029,7 +1101,7 @@ button{cursor:pointer}
     <div class="timeline-item">
       <div class="time">約 10:15</div>
       <div class="timeline-content">
-        <div class="item-title">前往 <a class="place-link" href="https://www.google.com/maps/search/?api=1&query=Maeklong%20Railway%20Market" target="_blank" rel="noopener">美功鐵道市集 <span aria-hidden="true">↗</span></a> </div>
+        <div class="item-title">丹嫩莎多水上市場 → <a class="place-link" href="https://www.google.com/maps/search/?api=1&query=Maeklong%20Railway%20Market" target="_blank" rel="noopener">美功鐵道市集 <span aria-hidden="true">↗</span></a></div>
         <div class="item-desc">預留時間卡位看火車。</div>
         
       </div>
@@ -1093,7 +1165,7 @@ button{cursor:pointer}
     <div class="timeline-item">
       <div class="time">晚餐 A</div>
       <div class="timeline-content">
-        <div class="item-title">回程順路外帶｜<a class="place-link" href="https://www.google.com/maps/search/?api=1&query=Chula%2050%20Kitchen%20Bangkok" target="_blank" rel="noopener">Chula 50 Kitchen <span aria-hidden="true">↗</span></a> <span class="badge">有餘裕</span></div>
+        <div class="item-title"><a class="place-link" href="https://www.google.com/maps/search/?api=1&query=Chula%2050%20Kitchen%20Bangkok" target="_blank" rel="noopener">Chula 50 Kitchen <span aria-hidden="true">↗</span></a>｜回程順路外帶 <span class="badge">有餘裕</span></div>
         <div class="item-desc">可加 <a class="place-link" href="https://www.google.com/maps/search/?api=1&query=Tang%20Sui%20Heng%20Bangkok" target="_blank" rel="noopener">Tang Sui Heng <span aria-hidden="true">↗</span></a>、<a class="place-link" href="https://www.google.com/maps/search/?api=1&query=Mae-Jim%20Mango%20Sticky%20Rice%20Bangkok" target="_blank" rel="noopener">Mae-Jim Mango Sticky Rice <span aria-hidden="true">↗</span></a>；若 Chula 50 等候超過 20–30 分鐘就不硬等。</div>
         
       </div>
@@ -1101,7 +1173,7 @@ button{cursor:pointer}
     <div class="timeline-item">
       <div class="time">晚餐 B</div>
       <div class="timeline-content">
-        <div class="item-title">直接回 <a class="place-link" href="https://www.google.com/maps/search/?api=1&query=Kokotel%20Bangkok%20Sukhumvit%2050" target="_blank" rel="noopener">Kokotel Bangkok Sukhumvit 50 <span aria-hidden="true">↗</span></a> 叫外送 <span class="badge">疲累優先</span></div>
+        <div class="item-title"><a class="place-link" href="https://www.google.com/maps/search/?api=1&query=Kokotel%20Bangkok%20Sukhumvit%2050" target="_blank" rel="noopener">Kokotel Bangkok Sukhumvit 50 <span aria-hidden="true">↗</span></a>｜叫外送 <span class="badge">疲累優先</span></div>
         <div class="item-desc">塞車、包車時間偏晚或大家累時，直接回飯店最省力。</div>
         
       </div>
@@ -1141,14 +1213,14 @@ button{cursor:pointer}
     <div class="timeline-item">
       <div class="time">約 10:00</div>
       <div class="timeline-content">
-        <div class="item-title">抵達 <a class="place-link" href="https://www.google.com/maps/search/?api=1&query=BTS%20Chit%20Lom%20Bangkok" target="_blank" rel="noopener">BTS Chit Lom（E1） <span aria-hidden="true">↗</span></a></div>
+        <div class="item-title"><a class="place-link" href="https://www.google.com/maps/search/?api=1&query=BTS%20Chit%20Lom%20Bangkok" target="_blank" rel="noopener">BTS Chit Lom（E1） <span aria-hidden="true">↗</span></a></div>
         <div class="item-desc">下車後步行前往 Gaysorn Amarin 的 LV The Place Bangkok；不用另外繞 Siam。</div>
       </div>
     </div>
     <div class="timeline-item">
       <div class="time">約 10:15</div>
       <div class="timeline-content">
-        <div class="item-title">抵達 <a class="place-link" href="https://www.google.com/maps/search/?api=1&query=LV%20The%20Place%20Bangkok%20Gaysorn%20Amarin" target="_blank" rel="noopener">LV The Place Bangkok <span aria-hidden="true">↗</span></a> <span class="badge">已預約</span></div>
+        <div class="item-title"><a class="place-link" href="https://www.google.com/maps/search/?api=1&query=LV%20The%20Place%20Bangkok%20Gaysorn%20Amarin" target="_blank" rel="noopener">LV The Place Bangkok <span aria-hidden="true">↗</span></a>｜預約入場 <span class="badge">已預約</span></div>
         <div class="item-desc">建議提早約 15 分鐘抵達，完成 Visionary Journeys 報到。</div>
       </div>
     </div>
@@ -1203,7 +1275,7 @@ button{cursor:pointer}
     <div class="timeline-item">
       <div class="time">14:10–14:30</div>
       <div class="timeline-content">
-        <div class="item-title">步行前往 <a class="place-link" href="https://www.google.com/maps/search/?api=1&query=PHOTOISM%20SIAMSCAPE%20215%20Siam%20Scape%201Floor%20SS107%20Pathum%20Wan%20Bangkok%2010330" target="_blank" rel="noopener">PHOTOISM SIAMSCAPE <span aria-hidden="true">↗</span></a></div>
+        <div class="item-title"><a class="place-link" href="https://www.google.com/maps/search/?api=1&query=PHOTOISM%20SIAMSCAPE%20215%20Siam%20Scape%201Floor%20SS107%20Pathum%20Wan%20Bangkok%2010330" target="_blank" rel="noopener">PHOTOISM SIAMSCAPE <span aria-hidden="true">↗</span></a></div>
         <div class="item-desc">從 Siam Square 往 SIAMSCAPE 移動，一路朝朱拉隆功／班塔通方向推進，不折返。</div>
       </div>
     </div>
@@ -1229,7 +1301,7 @@ button{cursor:pointer}
     <div class="timeline-item">
       <div class="time">16:20–16:40</div>
       <div class="timeline-content">
-        <div class="item-title">前往 <a class="place-link" href="https://www.google.com/maps/search/?api=1&query=Banthat%20Thong%20Road%20Bangkok" target="_blank" rel="noopener">Banthat Thong <span aria-hidden="true">↗</span></a></div>
+        <div class="item-title"><a class="place-link" href="https://www.google.com/maps/search/?api=1&query=Banthat%20Thong%20Road%20Bangkok" target="_blank" rel="noopener">Banthat Thong <span aria-hidden="true">↗</span></a></div>
         <div class="item-desc">SIAMSCAPE 已靠近朱拉隆功生活圈；體力好可步行延伸，天氣熱或孩子累就短程 Grab／Bolt。</div>
         <div class="transport"><strong>交通：</strong>建議短程 Grab／Bolt，保留體力給晚餐與甜點。</div>
       </div>
@@ -1251,7 +1323,7 @@ button{cursor:pointer}
     <div class="timeline-item">
       <div class="time">約 18:30 後</div>
       <div class="timeline-content">
-        <div class="item-title">返回 <a class="place-link" href="https://www.google.com/maps/search/?api=1&query=Kokotel%20Bangkok%20Sukhumvit%2050" target="_blank" rel="noopener">Kokotel Bangkok Sukhumvit 50 <span aria-hidden="true">↗</span></a></div>
+        <div class="item-title">班塔通美食街 → <a class="place-link" href="https://www.google.com/maps/search/?api=1&query=Kokotel%20Bangkok%20Sukhumvit%2050" target="_blank" rel="noopener">Kokotel Bangkok Sukhumvit 50 <span aria-hidden="true">↗</span></a></div>
         <div class="item-desc">最省力直接 Grab／Bolt 回飯店；若想搭 BTS，再視當下位置前往 National Stadium／Siam 轉 Sukhumvit Line 回 On Nut。</div>
       </div>
     </div></div>
@@ -1316,7 +1388,7 @@ button{cursor:pointer}
     <div class="timeline-item">
       <div class="time">15:30–16:30</div>
       <div class="timeline-content">
-        <div class="item-title">回 <a class="place-link" href="https://www.google.com/maps/search/?api=1&query=Kokotel%20Bangkok%20Sukhumvit%2050" target="_blank" rel="noopener">Kokotel Bangkok Sukhumvit 50 <span aria-hidden="true">↗</span></a> </div>
+        <div class="item-title">On Nut → <a class="place-link" href="https://www.google.com/maps/search/?api=1&query=Kokotel%20Bangkok%20Sukhumvit%2050" target="_blank" rel="noopener">Kokotel Bangkok Sukhumvit 50 <span aria-hidden="true">↗</span></a></div>
         <div class="item-desc">放戰利品、吹冷氣、休息 45–60 分鐘。</div>
         
       </div>
@@ -1438,7 +1510,7 @@ button{cursor:pointer}
     <div class="timeline-item">
       <div class="time">中午 B</div>
       <div class="timeline-content">
-        <div class="item-title">直接前往 <a class="place-link" href="https://www.google.com/maps/search/?api=1&query=ICONSIAM%20Bangkok" target="_blank" rel="noopener">ICONSIAM <span aria-hidden="true">↗</span></a> 用餐 <span class="badge">方案 B</span></div>
+        <div class="item-title"><a class="place-link" href="https://www.google.com/maps/search/?api=1&query=ICONSIAM%20Bangkok" target="_blank" rel="noopener">ICONSIAM <span aria-hidden="true">↗</span></a>｜午餐 <span class="badge">方案 B</span></div>
         <div class="item-desc">依拍照進度、天氣、排隊與體力決定。</div>
         
       </div>
@@ -1538,7 +1610,7 @@ button{cursor:pointer}
     <div class="timeline-item">
       <div class="time">09:15–09:45</div>
       <div class="timeline-content">
-        <div class="item-title">抵達 <a class="place-link" href="https://www.google.com/maps/search/?api=1&query=Suvarnabhumi%20Airport%20Bangkok" target="_blank" rel="noopener">BKK 素萬那普機場 <span aria-hidden="true">↗</span></a> </div>
+        <div class="item-title"><a class="place-link" href="https://www.google.com/maps/search/?api=1&query=Suvarnabhumi%20Airport%20Bangkok" target="_blank" rel="noopener">BKK 素萬那普機場 <span aria-hidden="true">↗</span></a>｜機場報到</div>
         <div class="item-desc">若需托運前 Customs Inspection，先查驗再辦理 CI832 報到／托運；之後安檢、出境、管制區內退稅。</div>
         
       </div>
@@ -1554,7 +1626,7 @@ button{cursor:pointer}
     <div class="timeline-item">
       <div class="time">18:00</div>
       <div class="timeline-content">
-        <div class="item-title">抵達 <a class="place-link" href="https://www.google.com/maps/search/?api=1&query=Taiwan%20Taoyuan%20International%20Airport%20Terminal%201" target="_blank" rel="noopener">桃園機場 T1 <span aria-hidden="true">↗</span></a> </div>
+        <div class="item-title"><a class="place-link" href="https://www.google.com/maps/search/?api=1&query=Taiwan%20Taoyuan%20International%20Airport%20Terminal%201" target="_blank" rel="noopener">桃園機場 T1 <span aria-hidden="true">↗</span></a>｜航班抵達</div>
         <div class="item-desc">旅程結束。</div>
         
       </div>
@@ -1735,6 +1807,93 @@ button{cursor:pointer}
 
 <script>
 (() => {
+  // 地點名稱：以台灣旅客熟悉的中文為主，並保留原文方便現場辨識與查詢。
+  const placeNames = {
+    '桃園機場 T1': ['桃園國際機場第一航廈', 'Taiwan Taoyuan International Airport T1'],
+    'BKK 素萬那普機場': ['素萬那普國際機場', 'Suvarnabhumi Airport · BKK'],
+    'Kokotel Bangkok Sukhumvit 50': ['Kokotel 曼谷素坤逸 50 飯店', 'Kokotel Bangkok Sukhumvit 50'],
+    'ChumChum Grocery': ['ChumChum 雜貨選物店', 'ChumChum Grocery'],
+    "Lotus's Sukhumvit 50": ["Lotus's 超市素坤逸 50 店", "Lotus's Sukhumvit 50"],
+    'BTS On Nut（E9）': ['BTS 安努站（E9）', 'On Nut'],
+    'BTS Asok（E4）': ['BTS 阿索克站（E4）', 'Asok'],
+    'BTS Chit Lom（E1）': ['BTS 奇隆站（E1）', 'Chit Lom'],
+    'BTS Ekkamai（E7）': ['BTS 伊卡邁站（E7）', 'Ekkamai'],
+    'BTS Krung Thon Buri（S7）': ['BTS 吞武里城站（S7）', 'Krung Thon Buri'],
+    'MRT Sukhumvit（BL22）': ['MRT 素坤逸站（BL22）', 'Sukhumvit'],
+    'MRT Kamphaeng Phet（BL12）': ['MRT 甘烹碧站（BL12）', 'Kamphaeng Phet'],
+    'MRT Sanam Chai（BL31）': ['MRT 沙南猜站（BL31）', 'Sanam Chai'],
+    'MRT Wat Mangkon': ['MRT 龍蓮寺站（BL29）', 'Wat Mangkon'],
+    'Gold Line Charoen Nakhon（G2）': ['金線 ICONSIAM 站（G2）', 'Charoen Nakhon'],
+    'Chatuchak Weekend Market': ['洽圖洽週末市集', 'Chatuchak Weekend Market'],
+    'Karmakamet Chatuchak': ['Karmakamet 洽圖洽店', 'Karmakamet Chatuchak'],
+    'Mixt Chatuchak': ['Mixt 洽圖洽購物中心', 'Mixt Chatuchak'],
+    'Terminal 21 Asok': ['Terminal 21 航站 21 購物中心', 'Terminal 21 Asok'],
+    'After You Dessert Cafe': ['After You 甜點店', 'After You Dessert Cafe'],
+    'SEE FAH': ['SEE FAH 泰式料理', 'SEE FAH'],
+    'Have a Zeed': ['Have a Zeed 東北泰料理', 'Have a Zeed'],
+    'Baan Ying Cafe & Meal': ['Baan Ying 泰式家庭料理', 'Baan Ying Cafe & Meal'],
+    'Pier 21 Food Terminal': ['Pier 21 美食街', 'Pier 21 Food Terminal'],
+    'Nirvana Treats Bangkok Massage': ['Nirvana Treats 按摩店', 'Nirvana Treats Bangkok Massage'],
+    'Sriayuthaya Lion Park': ['大城動物園', 'Sriayuthaya Lion Park'],
+    'Pa Lek Boat Noodle': ['Pa Lek 大城船麵', 'Pa Lek Boat Noodle'],
+    '瑪哈泰寺 Wat Mahathat': ['瑪哈泰寺（樹中佛頭）', 'Wat Mahathat'],
+    'Roti Sai Mai Abeedeen-Pranom Sangaroon': ['大城棉花糖煎餅老店', 'Abeedeen–Pranom Sangaroon'],
+    '柴瓦塔那蘭寺 Wat Chaiwatthanaram': ['柴瓦塔那蘭寺（貴妃寺）', 'Wat Chaiwatthanaram'],
+    'Save One Go Market': ['Save One Go 夜市', 'Save One Go Market'],
+    '丹嫩莎多水上市場': ['丹嫩莎多水上市場', 'Damnoen Saduak Floating Market'],
+    '美功鐵道市集': ['美功鐵道市場', 'Maeklong Railway Market'],
+    'Ruen Wari Restaurant': ['Ruen Wari 餐廳', 'Ruen Wari Restaurant'],
+    'Daeng Seafood': ['紅屋海鮮', 'Daeng Seafood'],
+    '廣銘珍廣式餛飩麵店': ['廣銘珍廣式餛飩麵', 'Google Maps：廣銘珍'],
+    '明記燒肉飯': ['明記燒肉飯', 'Google Maps：明記燒肉飯'],
+    'Mae Klong Fresh Market': ['美功鮮食市場', 'Mae Klong Fresh Market'],
+    'Damnoen Sky': ['丹嫩莎多景觀咖啡廳', 'Damnoen Sky'],
+    'Chula 50 Kitchen': ['朱拉 50 廚房', 'Chula 50 Kitchen'],
+    'Tang Sui Heng': ['Tang Sui Heng 鴨肉麵店', 'Tang Sui Heng'],
+    'Mae-Jim Mango Sticky Rice': ['Mae-Jim 芒果糯米飯', 'Mae-Jim Mango Sticky Rice'],
+    'LV The Place Bangkok': ['LV The Place 曼谷複合空間', 'LV The Place Bangkok'],
+    'CentralWorld': ['CentralWorld 尚泰世界購物中心', 'CentralWorld'],
+    'Siam Paragon': ['暹羅百麗宮', 'Siam Paragon'],
+    'True Alpha Hub': ['True Alpha Hub 暹羅廣場店', 'True Alpha Hub'],
+    'PHOTOISM SIAMSCAPE': ['PHOTOISM 韓式拍貼', 'PHOTOISM SIAMSCAPE'],
+    'PHOTOISM SIAMSCAPE 1F｜SS107': ['PHOTOISM 韓式拍貼｜1樓 SS107', 'PHOTOISM SIAMSCAPE'],
+    'Banthat Thong': ['班塔通美食街', 'Banthat Thong Road'],
+    'Mother Cows': ['Mother Cows 牛奶甜點店', 'Mother Cows'],
+    'Song Wat Road 松瓦路': ['松瓦路', 'Song Wat Road'],
+    'Ruay Mitr Ekkamai': ['Ruay Mitr 伊卡邁店', 'Ruay Mitr Ekkamai'],
+    'Chocolate Ville': ['巧克力村', 'Chocolate Ville'],
+    '鄭王廟 Wat Arun': ['鄭王廟（黎明寺）', 'Wat Arun'],
+    'Tha Tien': ['塔田碼頭／塔田區', 'Tha Tien'],
+    'Bangkok & Blush': ['Bangkok & Blush 泰服租借', 'Bangkok & Blush'],
+    'BaaN WANGDOEM 7': ['BaaN WANGDOEM 7 泰服租借', 'BaaN WANGDOEM 7'],
+    'Supanniga Eating Room Tha Tien': ['Supanniga Eating Room 塔田河畔店', 'Supanniga Eating Room Tha Tien'],
+    'Eat Sight Story Deck': ['Eat Sight Story 鄭王廟景觀餐廳', 'Eat Sight Story Deck'],
+    'Home Cafe Tha Tien': ['Home Cafe 塔田店', 'Home Cafe Tha Tien'],
+    'ICONSIAM': ['暹羅天地', 'ICONSIAM'],
+    'SOOKSIAM': ['SOOKSIAM 室內水上市場', 'SOOKSIAM'],
+    'Meridian Cruise 2': ['子午線 2 號遊船', 'Meridian Cruise 2']
+  };
+
+  document.querySelectorAll('.place-link').forEach(link => {
+    const current = link.textContent.replace('↗', '').trim();
+    const names = placeNames[current];
+    if (!names) return;
+
+    link.textContent = '';
+    const primary = document.createElement('span');
+    primary.className = 'place-primary';
+    primary.textContent = names[0];
+    const original = document.createElement('span');
+    original.className = 'place-original';
+    original.textContent = names[1];
+    const arrow = document.createElement('span');
+    arrow.className = 'place-arrow';
+    arrow.setAttribute('aria-hidden', 'true');
+    arrow.textContent = '↗';
+    link.append(primary, original, arrow);
+    link.setAttribute('aria-label', `${names[0]}，原文 ${names[1]}，開啟 Google Maps`);
+  });
+
   const root = document.documentElement;
   const toast = document.getElementById('toast');
   const showToast = (msg) => {
