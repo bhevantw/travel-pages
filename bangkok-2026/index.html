@@ -190,6 +190,21 @@ button{cursor:pointer}
 .info-card{padding:18px}
 .info-head{display:flex;align-items:center;gap:12px;justify-content:space-between}
 .info-head h2{margin:.2rem 0;font-size:1.25rem}
+.info-toggle-arrow{
+  flex:0 0 auto;
+  width:38px;
+  height:38px;
+  display:grid;
+  place-items:center;
+  border:0;
+  background:transparent;
+  color:var(--muted);
+  padding:0;
+  font-size:1.4rem;
+  line-height:1;
+  transition:transform .25s ease;
+}
+.info-toggle-arrow[aria-expanded="true"]{transform:rotate(180deg)}
 .info-body{margin-top:12px}
 .info-body.hidden{display:none}
 .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
@@ -276,30 +291,41 @@ button{cursor:pointer}
 }
 
 
-/* 航班資訊：合併成同一張卡 */
+/* 航班資訊：同一張卡內去程／回程左右並排 */
 .flight-summary-wrap{
   grid-template-columns:1fr!important;
 }
 .flight-summary{
   padding:11px 14px 12px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  column-gap:14px;
+  row-gap:7px;
 }
 .flight-summary-title{
+  grid-column:1 / -1;
   color:#8b5d4c;
   font-size:.78rem;
   font-weight:900;
   letter-spacing:.08em;
-  margin-bottom:7px;
+  margin-bottom:1px;
 }
 .flight-row{
+  min-width:0;
   display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:18px;
+  flex-direction:column;
+  align-items:flex-start;
+  justify-content:center;
+  gap:4px;
+  padding:7px 8px;
+  background:rgba(255,250,245,.62);
+  border:1px solid rgba(166,119,87,.16);
+  border-radius:12px;
 }
 .flight-left{
   display:flex;
   align-items:center;
-  gap:10px;
+  gap:8px;
   min-width:0;
 }
 .flight-left .flight-label{
@@ -309,19 +335,23 @@ button{cursor:pointer}
 .flight-left strong{
   display:inline-block;
   white-space:nowrap;
-  font-size:1.05rem;
+  font-size:1rem;
 }
 .flight-time{
   color:#604b41;
   font-weight:850;
-  font-size:.91rem;
+  font-size:.84rem;
   white-space:nowrap;
-  text-align:right;
+  text-align:left;
 }
-.flight-divider{
-  height:1px;
-  background:rgba(166,119,87,.22);
-  margin:8px 0;
+.flight-divider{display:none}
+@media (max-width:420px){
+  .flight-summary{column-gap:7px;padding:10px}
+  .flight-row{padding:7px 6px;gap:3px}
+  .flight-left{gap:5px}
+  .flight-left .flight-label{font-size:.70rem}
+  .flight-left strong{font-size:.88rem}
+  .flight-time{font-size:.69rem;letter-spacing:-.015em}
 }
 
 /* 固定在畫面最下方的旅行工具列 */
@@ -1160,7 +1190,7 @@ button{cursor:pointer}
     </div>
 
     <div class="segment">
-      <h3>下午｜Siam Square 三個拍貼點</h3>
+      <h3>下午｜Siam Square＋SIAMSCAPE PHOTOISM</h3>
       <div class="timeline">
     <div class="timeline-item">
       <div class="time">13:30–14:10</div>
@@ -1171,38 +1201,24 @@ button{cursor:pointer}
       </div>
     </div>
     <div class="timeline-item">
-      <div class="time">14:10–14:15</div>
+      <div class="time">14:10–14:30</div>
       <div class="timeline-content">
-        <div class="item-title">步行前往 Sculpture</div>
-        <div class="item-desc">同在 Siam Square Soi 3 一帶，距離很近。</div>
+        <div class="item-title">步行前往 <a class="place-link" href="https://www.google.com/maps/search/?api=1&query=PHOTOISM%20SIAMSCAPE%20215%20Siam%20Scape%201Floor%20SS107%20Pathum%20Wan%20Bangkok%2010330" target="_blank" rel="noopener">PHOTOISM SIAMSCAPE <span aria-hidden="true">↗</span></a></div>
+        <div class="item-desc">從 Siam Square 往 SIAMSCAPE 移動，一路朝朱拉隆功／班塔通方向推進，不折返。</div>
       </div>
     </div>
     <div class="timeline-item">
-      <div class="time">14:15–14:40</div>
+      <div class="time">14:30–15:00</div>
       <div class="timeline-content">
-        <div class="item-title"><a class="place-link" href="https://www.google.com/maps/search/?api=1&query=Sculpture%20Siam%20Square%20Soi%203%20Bangkok" target="_blank" rel="noopener">Sculpture <span aria-hidden="true">↗</span></a>｜Monchhichi 蒙奇奇拍貼</div>
-        <div class="item-desc">安排蒙奇奇聯名拍貼；實際聯名框與機台內容依當日現場為準。</div>
+        <div class="item-title"><a class="place-link" href="https://www.google.com/maps/search/?api=1&query=PHOTOISM%20SIAMSCAPE%20215%20Siam%20Scape%201Floor%20SS107%20Pathum%20Wan%20Bangkok%2010330" target="_blank" rel="noopener">PHOTOISM SIAMSCAPE 1F｜SS107 <span aria-hidden="true">↗</span></a></div>
+        <div class="item-desc">拍貼機地址：215 Siam Scape 1Floor, SS107, Pathum Wan, Bangkok 10330 泰國。安排韓星／K-pop 聯名拍貼；當日可用藝人框依現場為準。</div>
       </div>
     </div>
     <div class="timeline-item">
-      <div class="time">14:40–14:50</div>
-      <div class="timeline-content">
-        <div class="item-title">步行前往 <a class="place-link" href="https://www.google.com/maps/search/?api=1&query=SIAMSCAPE%20Bangkok" target="_blank" rel="noopener">SIAMSCAPE <span aria-hidden="true">↗</span></a></div>
-        <div class="item-desc">一路往朱拉隆功／班塔通方向推進，不折返。</div>
-      </div>
-    </div>
-    <div class="timeline-item">
-      <div class="time">14:50–15:20</div>
-      <div class="timeline-content">
-        <div class="item-title">SIAMSCAPE 1F｜韓星／K-pop 拍貼</div>
-        <div class="item-desc">安排韓國明星／K-pop 聯名拍貼；當日可用藝人框依現場為準。</div>
-      </div>
-    </div>
-    <div class="timeline-item">
-      <div class="time">15:20–16:20</div>
+      <div class="time">15:00–16:20</div>
       <div class="timeline-content">
         <div class="item-title">Siam Square／SIAMSCAPE 周邊自由逛＋休息</div>
-        <div class="item-desc">喝飲料、逛小店、找座位休息；如果前面拍貼排隊久，就直接壓縮這一段，不犧牲晚餐時間。</div>
+        <div class="item-desc">喝飲料、逛小店、找座位休息；如果 PHOTOISM 排隊久，就直接壓縮這一段，不犧牲晚餐時間。</div>
       </div>
     </div></div>
     </div>
@@ -1241,7 +1257,7 @@ button{cursor:pointer}
     </div></div>
     </div>
 
-    <div class="callout"><strong>8/26 正式版：</strong>LV Visionary Journeys（10:30 已預約）→ CentralWorld 短逛 → Siam Paragon 午餐 → True Alpha Hub → Sculpture 蒙奇奇拍貼 → SIAMSCAPE 韓星拍貼 → Banthat Thong 晚餐 → Mother Cows。SEA LIFE 與 BACC 均取消；CentralWorld 已列入正式主行程，不再只是備選。</div>
+    <div class="callout"><strong>8/26 正式版：</strong>LV Visionary Journeys（10:30 已預約）→ CentralWorld 短逛 → Siam Paragon 午餐 → True Alpha Hub → PHOTOISM SIAMSCAPE 1F（SS107）拍貼 → Banthat Thong 晚餐 → Mother Cows。SEA LIFE 與 BACC 均取消；CentralWorld 已列入正式主行程，不再只是備選。</div>
         </div>
       </div>
     </article>
@@ -1249,118 +1265,6 @@ button{cursor:pointer}
     <article class="day-card" id="day-8-27" data-day="8/27">
       <button class="day-toggle" type="button" aria-expanded="false">
         <div class="date-pill"><span>8/27</span><small>週四</small></div>
-        <div class="day-title-wrap">
-          <h2>鄭王廟泰服＋ICONSIAM＋夕陽遊船</h2>
-          <div class="mini-route">點一下展開／收合</div>
-        </div>
-        <span class="chevron" aria-hidden="true">⌄</span>
-      </button>
-      <div class="day-panel">
-        <div class="day-actions no-copy">
-          <button type="button" class="action-btn copy-day">📋 複製當天</button>
-          <button type="button" class="action-btn note-day">📝 看備忘錄</button>
-        </div>
-        <div class="day-copy-source">
-          
-    <div class="segment">
-      <h3>上午｜鄭王廟泰服</h3>
-      <div class="timeline">
-    <div class="timeline-item">
-      <div class="time">08:00</div>
-      <div class="timeline-content">
-        <div class="item-title"><a class="place-link" href="https://www.google.com/maps/search/?api=1&query=Kokotel%20Bangkok%20Sukhumvit%2050" target="_blank" rel="noopener">Kokotel Bangkok Sukhumvit 50 <span aria-hidden="true">↗</span></a> → <a class="place-link" href="https://www.google.com/maps/search/?api=1&query=Wat%20Arun%20Bangkok" target="_blank" rel="noopener">鄭王廟 Wat Arun <span aria-hidden="true">↗</span></a> </div>
-        <div class="item-desc"><a class="place-link" href="https://www.google.com/maps/search/?api=1&query=BTS%20On%20Nut%20Bangkok" target="_blank" rel="noopener">BTS On Nut（E9） <span aria-hidden="true">↗</span></a> → <a class="place-link" href="https://www.google.com/maps/search/?api=1&query=BTS%20Asok%20Bangkok" target="_blank" rel="noopener">BTS Asok（E4） <span aria-hidden="true">↗</span></a> → 轉 <a class="place-link" href="https://www.google.com/maps/search/?api=1&query=MRT%20Sukhumvit%20Bangkok" target="_blank" rel="noopener">MRT Sukhumvit（BL22） <span aria-hidden="true">↗</span></a> → <a class="place-link" href="https://www.google.com/maps/search/?api=1&query=MRT%20Sanam%20Chai%20Bangkok" target="_blank" rel="noopener">MRT Sanam Chai（BL31） <span aria-hidden="true">↗</span></a> → 步行至 <a class="place-link" href="https://www.google.com/maps/search/?api=1&query=Tha%20Tien%20Pier%20Bangkok" target="_blank" rel="noopener">Tha Tien <span aria-hidden="true">↗</span></a> → 渡船到 Wat Arun Pier。</div>
-        
-      </div>
-    </div>
-    <div class="timeline-item">
-      <div class="time">約 09:00</div>
-      <div class="timeline-content">
-        <div class="item-title"><a class="place-link" href="https://www.google.com/maps/search/?api=1&query=Bangkok%20%26%20Blush%20Wat%20Arun" target="_blank" rel="noopener">Bangkok &amp; Blush <span aria-hidden="true">↗</span></a>／<a class="place-link" href="https://www.google.com/maps/search/?api=1&query=BaaN%20WANGDOEM%207%20Bangkok" target="_blank" rel="noopener">BaaN WANGDOEM 7 <span aria-hidden="true">↗</span></a> </div>
-        <div class="item-desc">泰服不預約，現場二選一；第一家等待明顯偏久就直接換第二家。</div>
-        
-      </div>
-    </div>
-    <div class="timeline-item">
-      <div class="time">上午</div>
-      <div class="timeline-content">
-        <div class="item-title"><a class="place-link" href="https://www.google.com/maps/search/?api=1&query=Wat%20Arun%20Bangkok" target="_blank" rel="noopener">鄭王廟 Wat Arun <span aria-hidden="true">↗</span></a> </div>
-        <div class="item-desc">正式拍照集中上午；太熱或下雨就縮短，不影響下午 ICONSIAM 與遊船。</div>
-        
-      </div>
-    </div></div>
-    </div>
-    <div class="segment">
-      <h3>中午／下午｜Tha Tien → ICONSIAM</h3>
-      <div class="timeline">
-    <div class="timeline-item">
-      <div class="time">中午 A</div>
-      <div class="timeline-content">
-        <div class="item-title"><a class="place-link" href="https://www.google.com/maps/search/?api=1&query=Tha%20Tien%20Pier%20Bangkok" target="_blank" rel="noopener">Tha Tien <span aria-hidden="true">↗</span></a> 河景午餐 <span class="badge">方案 A</span></div>
-        <div class="item-desc">可現場從 <a class="place-link" href="https://www.google.com/maps/search/?api=1&query=Supanniga%20Eating%20Room%20Tha%20Tien" target="_blank" rel="noopener">Supanniga Eating Room Tha Tien <span aria-hidden="true">↗</span></a>、<a class="place-link" href="https://www.google.com/maps/search/?api=1&query=Eat%20Sight%20Story%20Deck%20Bangkok" target="_blank" rel="noopener">Eat Sight Story Deck <span aria-hidden="true">↗</span></a>、<a class="place-link" href="https://www.google.com/maps/search/?api=1&query=Home%20Cafe%20Tha%20Tien%20Bangkok" target="_blank" rel="noopener">Home Cafe Tha Tien <span aria-hidden="true">↗</span></a> 挑一間。</div>
-        
-      </div>
-    </div>
-    <div class="timeline-item">
-      <div class="time">中午 B</div>
-      <div class="timeline-content">
-        <div class="item-title">直接前往 <a class="place-link" href="https://www.google.com/maps/search/?api=1&query=ICONSIAM%20Bangkok" target="_blank" rel="noopener">ICONSIAM <span aria-hidden="true">↗</span></a> 用餐 <span class="badge">方案 B</span></div>
-        <div class="item-desc">依拍照進度、天氣、排隊與體力決定。</div>
-        
-      </div>
-    </div>
-    <div class="timeline-item">
-      <div class="time">下午</div>
-      <div class="timeline-content">
-        <div class="item-title"><a class="place-link" href="https://www.google.com/maps/search/?api=1&query=ICONSIAM%20Bangkok" target="_blank" rel="noopener">ICONSIAM <span aria-hidden="true">↗</span></a>／<a class="place-link" href="https://www.google.com/maps/search/?api=1&query=SOOKSIAM%20ICONSIAM" target="_blank" rel="noopener">SOOKSIAM <span aria-hidden="true">↗</span></a> </div>
-        <div class="item-desc">進館後以逛街、拍照、喝飲料與休息為主，不再跨區。</div>
-        
-      </div>
-    </div>
-    <div class="timeline-item">
-      <div class="time">15:30–16:15</div>
-      <div class="timeline-content">
-        <div class="item-title"><a class="place-link" href="https://www.google.com/maps/search/?api=1&query=ICONSIAM%20Bangkok" target="_blank" rel="noopener">ICONSIAM <span aria-hidden="true">↗</span></a> Pier 1｜<a class="place-link" href="https://www.google.com/maps/search/?api=1&query=Meridian%20Cruise%20ICONSIAM%20Bangkok" target="_blank" rel="noopener">Meridian Cruise 2 <span aria-hidden="true">↗</span></a> 報到 </div>
-        <div class="item-desc">Klook 憑證指定報到時段；建議 15:30 左右就到。</div>
-        
-      </div>
-    </div>
-    <div class="timeline-item">
-      <div class="time">16:30–18:30</div>
-      <div class="timeline-content">
-        <div class="item-title"><a class="place-link" href="https://www.google.com/maps/search/?api=1&query=Meridian%20Cruise%20ICONSIAM%20Bangkok" target="_blank" rel="noopener">Meridian Cruise 2 <span aria-hidden="true">↗</span></a> Sunset Cruise </div>
-        <div class="item-desc">已訂 4 人，最終實付 NT$1,988（平均 NT$497／人）。</div>
-        
-      </div>
-    </div></div>
-    </div>
-    <div class="segment">
-      <h3>晚上｜水舞／回飯店</h3>
-      <div class="timeline">
-    <div class="timeline-item">
-      <div class="time">18:30 後</div>
-      <div class="timeline-content">
-        <div class="item-title"><a class="place-link" href="https://www.google.com/maps/search/?api=1&query=ICONSIAM%20Bangkok" target="_blank" rel="noopener">ICONSIAM <span aria-hidden="true">↗</span></a> River Park 水舞 <span class="badge">選配</span></div>
-        <div class="item-desc">有精神才看；沒體力直接回飯店。</div>
-        
-      </div>
-    </div>
-    <div class="timeline-item">
-      <div class="time">回程</div>
-      <div class="timeline-content">
-        <div class="item-title"><a class="place-link" href="https://www.google.com/maps/search/?api=1&query=ICONSIAM%20Bangkok" target="_blank" rel="noopener">ICONSIAM <span aria-hidden="true">↗</span></a> → <a class="place-link" href="https://www.google.com/maps/search/?api=1&query=Kokotel%20Bangkok%20Sukhumvit%2050" target="_blank" rel="noopener">Kokotel Bangkok Sukhumvit 50 <span aria-hidden="true">↗</span></a> </div>
-        <div class="item-desc"><a class="place-link" href="https://www.google.com/maps/search/?api=1&query=Gold%20Line%20Charoen%20Nakhon%20Bangkok" target="_blank" rel="noopener">Gold Line Charoen Nakhon（G2） <span aria-hidden="true">↗</span></a> → <a class="place-link" href="https://www.google.com/maps/search/?api=1&query=BTS%20Krung%20Thon%20Buri%20Bangkok" target="_blank" rel="noopener">BTS Krung Thon Buri（S7） <span aria-hidden="true">↗</span></a> → BTS Silom Line 到 Siam → 轉 Sukhumvit Line 到 <a class="place-link" href="https://www.google.com/maps/search/?api=1&query=BTS%20On%20Nut%20Bangkok" target="_blank" rel="noopener">BTS On Nut（E9） <span aria-hidden="true">↗</span></a>。雨大或孩子很累直接 Grab。</div>
-        
-      </div>
-    </div></div>
-    </div><div class="callout"><strong>固定核心：</strong>鄭王廟泰服 → 午餐（二選一）→ ICONSIAM → Meridian Cruise 2；15:30 前到 Pier 1 報到不變。</div>
-        </div>
-      </div>
-    </article>
-    
-    <article class="day-card" id="day-8-28" data-day="8/28">
-      <button class="day-toggle" type="button" aria-expanded="false">
-        <div class="date-pill"><span>8/28</span><small>週五</small></div>
         <div class="day-title-wrap">
           <h2>松瓦路＋Lotus＋Ekkamai｜雨備 CentralWorld</h2>
           <div class="mini-route">點一下展開／收合</div>
@@ -1470,8 +1374,120 @@ button{cursor:pointer}
       </div>
     </div></div>
     </div>
-<div class="callout warning"><strong>ChumChum 例外：</strong>若 8/22 沒完成 <a class="place-link" href="https://www.google.com/maps/search/?api=1&query=ChumChum%20Grocery%20Bangkok" target="_blank" rel="noopener">ChumChum Grocery <span aria-hidden="true">↗</span></a>，8/28 上午優先補 ChumChum，松瓦路直接取消，不把兩個戶外／逛街點塞在一起。</div>
+<div class="callout warning"><strong>ChumChum 例外：</strong>若 8/22 沒完成 <a class="place-link" href="https://www.google.com/maps/search/?api=1&query=ChumChum%20Grocery%20Bangkok" target="_blank" rel="noopener">ChumChum Grocery <span aria-hidden="true">↗</span></a>，8/27 上午優先補 ChumChum，松瓦路直接取消，不把兩個戶外／逛街點塞在一起。</div>
 
+        </div>
+      </div>
+    </article>
+    
+    <article class="day-card" id="day-8-28" data-day="8/28">
+      <button class="day-toggle" type="button" aria-expanded="false">
+        <div class="date-pill"><span>8/28</span><small>週五</small></div>
+        <div class="day-title-wrap">
+          <h2>鄭王廟泰服＋ICONSIAM＋夕陽遊船</h2>
+          <div class="mini-route">點一下展開／收合</div>
+        </div>
+        <span class="chevron" aria-hidden="true">⌄</span>
+      </button>
+      <div class="day-panel">
+        <div class="day-actions no-copy">
+          <button type="button" class="action-btn copy-day">📋 複製當天</button>
+          <button type="button" class="action-btn note-day">📝 看備忘錄</button>
+        </div>
+        <div class="day-copy-source">
+          
+    <div class="segment">
+      <h3>上午｜鄭王廟泰服</h3>
+      <div class="timeline">
+    <div class="timeline-item">
+      <div class="time">08:00</div>
+      <div class="timeline-content">
+        <div class="item-title"><a class="place-link" href="https://www.google.com/maps/search/?api=1&query=Kokotel%20Bangkok%20Sukhumvit%2050" target="_blank" rel="noopener">Kokotel Bangkok Sukhumvit 50 <span aria-hidden="true">↗</span></a> → <a class="place-link" href="https://www.google.com/maps/search/?api=1&query=Wat%20Arun%20Bangkok" target="_blank" rel="noopener">鄭王廟 Wat Arun <span aria-hidden="true">↗</span></a> </div>
+        <div class="item-desc"><a class="place-link" href="https://www.google.com/maps/search/?api=1&query=BTS%20On%20Nut%20Bangkok" target="_blank" rel="noopener">BTS On Nut（E9） <span aria-hidden="true">↗</span></a> → <a class="place-link" href="https://www.google.com/maps/search/?api=1&query=BTS%20Asok%20Bangkok" target="_blank" rel="noopener">BTS Asok（E4） <span aria-hidden="true">↗</span></a> → 轉 <a class="place-link" href="https://www.google.com/maps/search/?api=1&query=MRT%20Sukhumvit%20Bangkok" target="_blank" rel="noopener">MRT Sukhumvit（BL22） <span aria-hidden="true">↗</span></a> → <a class="place-link" href="https://www.google.com/maps/search/?api=1&query=MRT%20Sanam%20Chai%20Bangkok" target="_blank" rel="noopener">MRT Sanam Chai（BL31） <span aria-hidden="true">↗</span></a> → 步行至 <a class="place-link" href="https://www.google.com/maps/search/?api=1&query=Tha%20Tien%20Pier%20Bangkok" target="_blank" rel="noopener">Tha Tien <span aria-hidden="true">↗</span></a> → 渡船到 Wat Arun Pier。</div>
+        
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="time">約 09:00</div>
+      <div class="timeline-content">
+        <div class="item-title"><a class="place-link" href="https://www.google.com/maps/search/?api=1&query=Bangkok%20%26%20Blush%20Wat%20Arun" target="_blank" rel="noopener">Bangkok &amp; Blush <span aria-hidden="true">↗</span></a>／<a class="place-link" href="https://www.google.com/maps/search/?api=1&query=BaaN%20WANGDOEM%207%20Bangkok" target="_blank" rel="noopener">BaaN WANGDOEM 7 <span aria-hidden="true">↗</span></a> </div>
+        <div class="item-desc">泰服不預約，現場二選一；第一家等待明顯偏久就直接換第二家。</div>
+        
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="time">上午</div>
+      <div class="timeline-content">
+        <div class="item-title"><a class="place-link" href="https://www.google.com/maps/search/?api=1&query=Wat%20Arun%20Bangkok" target="_blank" rel="noopener">鄭王廟 Wat Arun <span aria-hidden="true">↗</span></a> </div>
+        <div class="item-desc">正式拍照集中上午；太熱或下雨就縮短，不影響下午 ICONSIAM 與遊船。</div>
+        
+      </div>
+    </div></div>
+    </div>
+    <div class="segment">
+      <h3>中午／下午｜Tha Tien → ICONSIAM</h3>
+      <div class="timeline">
+    <div class="timeline-item">
+      <div class="time">中午 A</div>
+      <div class="timeline-content">
+        <div class="item-title"><a class="place-link" href="https://www.google.com/maps/search/?api=1&query=Tha%20Tien%20Pier%20Bangkok" target="_blank" rel="noopener">Tha Tien <span aria-hidden="true">↗</span></a> 河景午餐 <span class="badge">方案 A</span></div>
+        <div class="item-desc">可現場從 <a class="place-link" href="https://www.google.com/maps/search/?api=1&query=Supanniga%20Eating%20Room%20Tha%20Tien" target="_blank" rel="noopener">Supanniga Eating Room Tha Tien <span aria-hidden="true">↗</span></a>、<a class="place-link" href="https://www.google.com/maps/search/?api=1&query=Eat%20Sight%20Story%20Deck%20Bangkok" target="_blank" rel="noopener">Eat Sight Story Deck <span aria-hidden="true">↗</span></a>、<a class="place-link" href="https://www.google.com/maps/search/?api=1&query=Home%20Cafe%20Tha%20Tien%20Bangkok" target="_blank" rel="noopener">Home Cafe Tha Tien <span aria-hidden="true">↗</span></a> 挑一間。</div>
+        
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="time">中午 B</div>
+      <div class="timeline-content">
+        <div class="item-title">直接前往 <a class="place-link" href="https://www.google.com/maps/search/?api=1&query=ICONSIAM%20Bangkok" target="_blank" rel="noopener">ICONSIAM <span aria-hidden="true">↗</span></a> 用餐 <span class="badge">方案 B</span></div>
+        <div class="item-desc">依拍照進度、天氣、排隊與體力決定。</div>
+        
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="time">下午</div>
+      <div class="timeline-content">
+        <div class="item-title"><a class="place-link" href="https://www.google.com/maps/search/?api=1&query=ICONSIAM%20Bangkok" target="_blank" rel="noopener">ICONSIAM <span aria-hidden="true">↗</span></a>／<a class="place-link" href="https://www.google.com/maps/search/?api=1&query=SOOKSIAM%20ICONSIAM" target="_blank" rel="noopener">SOOKSIAM <span aria-hidden="true">↗</span></a> </div>
+        <div class="item-desc">進館後以逛街、拍照、喝飲料與休息為主，不再跨區。</div>
+        
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="time">15:30–16:15</div>
+      <div class="timeline-content">
+        <div class="item-title"><a class="place-link" href="https://www.google.com/maps/search/?api=1&query=ICONSIAM%20Bangkok" target="_blank" rel="noopener">ICONSIAM <span aria-hidden="true">↗</span></a> Pier 1｜<a class="place-link" href="https://www.google.com/maps/search/?api=1&query=Meridian%20Cruise%20ICONSIAM%20Bangkok" target="_blank" rel="noopener">Meridian Cruise 2 <span aria-hidden="true">↗</span></a> 報到 </div>
+        <div class="item-desc">Klook 憑證指定報到時段；建議 15:30 左右就到。</div>
+        
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="time">16:30–18:30</div>
+      <div class="timeline-content">
+        <div class="item-title"><a class="place-link" href="https://www.google.com/maps/search/?api=1&query=Meridian%20Cruise%20ICONSIAM%20Bangkok" target="_blank" rel="noopener">Meridian Cruise 2 <span aria-hidden="true">↗</span></a> Sunset Cruise </div>
+        <div class="item-desc">已訂 4 人，最終實付 NT$1,988（平均 NT$497／人）。</div>
+        
+      </div>
+    </div></div>
+    </div>
+    <div class="segment">
+      <h3>晚上｜水舞／回飯店</h3>
+      <div class="timeline">
+    <div class="timeline-item">
+      <div class="time">18:30 後</div>
+      <div class="timeline-content">
+        <div class="item-title"><a class="place-link" href="https://www.google.com/maps/search/?api=1&query=ICONSIAM%20Bangkok" target="_blank" rel="noopener">ICONSIAM <span aria-hidden="true">↗</span></a> River Park 水舞 <span class="badge">選配</span></div>
+        <div class="item-desc">有精神才看；沒體力直接回飯店。</div>
+        
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="time">回程</div>
+      <div class="timeline-content">
+        <div class="item-title"><a class="place-link" href="https://www.google.com/maps/search/?api=1&query=ICONSIAM%20Bangkok" target="_blank" rel="noopener">ICONSIAM <span aria-hidden="true">↗</span></a> → <a class="place-link" href="https://www.google.com/maps/search/?api=1&query=Kokotel%20Bangkok%20Sukhumvit%2050" target="_blank" rel="noopener">Kokotel Bangkok Sukhumvit 50 <span aria-hidden="true">↗</span></a> </div>
+        <div class="item-desc"><a class="place-link" href="https://www.google.com/maps/search/?api=1&query=Gold%20Line%20Charoen%20Nakhon%20Bangkok" target="_blank" rel="noopener">Gold Line Charoen Nakhon（G2） <span aria-hidden="true">↗</span></a> → <a class="place-link" href="https://www.google.com/maps/search/?api=1&query=BTS%20Krung%20Thon%20Buri%20Bangkok" target="_blank" rel="noopener">BTS Krung Thon Buri（S7） <span aria-hidden="true">↗</span></a> → BTS Silom Line 到 Siam → 轉 Sukhumvit Line 到 <a class="place-link" href="https://www.google.com/maps/search/?api=1&query=BTS%20On%20Nut%20Bangkok" target="_blank" rel="noopener">BTS On Nut（E9） <span aria-hidden="true">↗</span></a>。雨大或孩子很累直接 Grab。</div>
+        
+      </div>
+    </div></div>
+    </div><div class="callout"><strong>固定核心：</strong>鄭王廟泰服 → 午餐（二選一）→ ICONSIAM → Meridian Cruise 2；15:30 前到 Pier 1 報到不變。</div>
         </div>
       </div>
     </article>
@@ -1555,9 +1571,9 @@ button{cursor:pointer}
       <span class="eyebrow">機場重要備忘</span>
       <h2>泰國退稅 VAT Refund</h2>
     </div>
-    <button class="action-btn no-copy" type="button" data-toggle-info="refund-body">展開／收合</button>
+    <button class="info-toggle-arrow no-copy" type="button" data-toggle-info="refund-body" aria-expanded="false" aria-label="展開／收合"><span class="chevron" aria-hidden="true">⌄</span></button>
   </div>
-  <div id="refund-body" class="info-body">
+  <div id="refund-body" class="info-body hidden">
     <div class="grid-2">
       <div>
         <h3>購物當下要完成</h3>
@@ -1592,7 +1608,7 @@ button{cursor:pointer}
       <span class="eyebrow">MEMO A</span>
       <h2>🧳 行李清單</h2>
     </div>
-    <button class="action-btn no-copy" type="button" data-toggle-info="packing-memo-body">展開／收合</button>
+    <button class="info-toggle-arrow no-copy" type="button" data-toggle-info="packing-memo-body" aria-expanded="false" aria-label="展開／收合"><span class="chevron" aria-hidden="true">⌄</span></button>
   </div>
   <div id="packing-memo-body" class="info-body hidden">
     <p class="memo-help">依四大類整理，出發前可逐項確認。勾選狀態會保留在目前這台裝置／瀏覽器。</p>
@@ -1826,8 +1842,12 @@ button{cursor:pointer}
 
   // 其他可收合資訊
   document.querySelectorAll('[data-toggle-info]').forEach(btn => {
+    const target = document.getElementById(btn.dataset.toggleInfo);
+    if (target) btn.setAttribute('aria-expanded', String(!target.classList.contains('hidden')));
     btn.addEventListener('click', () => {
-      document.getElementById(btn.dataset.toggleInfo).classList.toggle('hidden');
+      if (!target) return;
+      target.classList.toggle('hidden');
+      btn.setAttribute('aria-expanded', String(!target.classList.contains('hidden')));
     });
   });
 
